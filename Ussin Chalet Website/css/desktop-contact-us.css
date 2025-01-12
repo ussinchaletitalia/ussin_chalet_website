@@ -1,0 +1,189 @@
+/* screen - desktop-contact-us */
+
+.desktop-contact-us {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  height: 832px;
+  overflow: hidden;
+  width: 1280px;
+}
+
+.desktop-contact-us .overlap-group2 {
+  height: 1861px;
+  position: relative;
+  width: 1282px;
+}
+
+.desktop-contact-us .rectangle-4 {
+  background-color: var(--vista-white);
+  height: 1792px;
+  left: 1px;
+  position: absolute;
+  top: 69px;
+  width: 1281px;
+}
+
+.desktop-contact-us .contact-us {
+  color: var(--dark-tan);
+  font-family: var(--font-family-inknut_antiqua);
+  font-size: var(--font-size-xxl);
+  font-weight: 700;
+  left: 348px;
+  letter-spacing: 5.52px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 162px;
+  width: 585px;
+}
+
+.desktop-contact-us .ussinchaletgmailcom-39-0123-456789 {
+  color: var(--black);
+  font-family: var(--font-family-kantumruy);
+  font-size: var(--font-size-l);
+  font-weight: 400;
+  left: 257px;
+  letter-spacing: 0;
+  line-height: 28px;
+  position: absolute;
+  text-align: center;
+  top: 216px;
+  width: 766px;
+}
+
+.desktop-contact-us .group-7 {
+  align-items: flex-start;
+  background-color: var(--dark-tan);
+  border-radius: 36px;
+  display: flex;
+  height: 43px;
+  left: 619px;
+  min-width: 43px;
+  padding: 9.8px 9.8px;
+  position: absolute;
+  top: 125px;
+}
+
+.desktop-contact-us .group {
+  height: 23px;
+  width: 23px;
+}
+
+.desktop-contact-us .group-20 {
+  height: 122px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+}
+
+.desktop-contact-us .overlap-group {
+  height: 435px;
+  left: 233px;
+  position: absolute;
+  top: 275px;
+  width: 814px;
+}
+
+.desktop-contact-us .rectangle-8 {
+  background-color: var(--dawn-pink);
+  border-radius: 12px;
+  height: 420px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 814px;
+}
+
+.desktop-contact-us .your-name {
+  top: 28px;
+}
+
+.desktop-contact-us .rectangle-9 {
+  background-color: var(--white);
+  border: 2px solid;
+  border-color: var(--dark-tan);
+  border-radius: 6px;
+  height: 38px;
+  left: 43px;
+  position: absolute;
+  top: 59px;
+  width: 728px;
+}
+
+.desktop-contact-us .rectangle-12 {
+  background-color: var(--white);
+  border: 2px solid;
+  border-color: var(--dark-tan);
+  border-radius: 6px;
+  height: 38px;
+  left: 43px;
+  position: absolute;
+  top: 133px;
+  width: 728px;
+}
+
+.desktop-contact-us .your-email {
+  top: 102px;
+}
+
+.desktop-contact-us .your-message {
+  top: 179px;
+}
+
+.desktop-contact-us .rectangle-11 {
+  background-color: var(--white);
+  border: 2px solid;
+  border-color: var(--dark-tan);
+  border-radius: 6px;
+  height: 107px;
+  left: 43px;
+  position: absolute;
+  top: 210px;
+  width: 727px;
+}
+
+.desktop-contact-us .group-22 {
+  height: 101px;
+  left: 269px;
+  position: absolute;
+  top: 334px;
+  width: 275px;
+}
+
+.desktop-contact-us .overlap-group1 {
+  height: 64px;
+  left: 0;
+  position: absolute;
+  top: 772px;
+  width: 1280px;
+}
+
+.desktop-contact-us .rectangle-7 {
+  background-color: var(--dark-tan);
+  box-shadow: 0px 4px 4px #0000004c , 0px 8px 12px 6px #00000026;
+  height: 58px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+}
+
+.desktop-contact-us .x2024-your-chalet-a {
+  left: 276px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 16px;
+  width: 728px;
+}
+
+.desktop-contact-us .your {
+  left: 51px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  width: 181px;
+}
