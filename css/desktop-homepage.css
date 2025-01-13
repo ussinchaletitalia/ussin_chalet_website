@@ -1,91 +1,67 @@
 /* screen - desktop-homepage */
 
 .desktop-homepage {
+  display: flex;
   align-items: flex-start;
   background-color: var(--white);
-  display: flex;
-  height: 832px;
-  width: 1280px;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  overflow: hidden; /* Ensure no scrolling */
 }
 
 .desktop-homepage .group-container {
-  align-items: center;
-  background-image: url(../img/ussinbeautiful-1.png);
-  background-position: 50% 50%;
-  background-size: cover;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  min-height: 832px;
-  width: 1280px;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-image: url(../img/ussinbeautiful-1.png); /* Add the full-screen background */
+  background-position: center;
+  background-size: cover; /* Cover the entire viewport */
+  background-repeat: no-repeat;
 }
 
 .desktop-homepage .overlap-group {
-  height: 119px;
-  margin-left: 1.0px;
-  margin-top: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
-  width: 442px;
+  width: auto;
+  height: auto;
+  margin-top: 0; /* Center the content */
 }
 
 .desktop-homepage .ussi-chalet_logo-1 {
-  height: 89px;
-  left: 83px;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  width: 277px;
+  max-width: 20%; /* Adjust logo size */
+  height: auto;
+  margin-bottom: 20px;
 }
 
 .desktop-homepage .authentic-alpine-living {
   color: var(--white);
   font-family: var(--font-family-inknut_antiqua);
-  font-size: var(--font-size-l);
-  font-weight: 400;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
+  font-size: 36px; /* Adjust for better visibility */
+  font-weight: bold;
   text-align: center;
-  top: 87px;
-  width: 442px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add subtle text shadow */
 }
 
 .desktop-homepage .group-container-1 {
-  height: 220px;
-  margin-right: 2.0px;
-  margin-top: 52px;
-  position: relative;
-  width: 230px;
-}
-
-.desktop-homepage .group-7 {
-  height: 105px;
-  left: 63px;
+  display: flex;
+  gap: 20px;
   position: absolute;
-  top: 115px;
-  width: 104px;
+  bottom: 30px; /* Position at the bottom */
+  width: auto;
+  justify-content: center;
 }
 
-.desktop-homepage .group-13 {
+.desktop-homepage .group-container-1 img {
   cursor: pointer;
-  height: 98px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 230px;
-}
-
-.desktop-homepage .group-14 {
-  cursor: pointer;
-  height: 98px;
-  left: 0;
-  position: absolute;
-  top: 56px;
-  width: 230px;
+  height: 60px; /* Adjust button height */
+  width: auto;
 }
 
 .desktop-homepage .group-21 {
-  height: 70px;
-  margin-top: 191px;
-  width: 1280px;
+  display: none; /* Remove group-21 if not necessary */
 }
