@@ -25,34 +25,13 @@
       }
     </script>
     <style>
-      /* Adjustments for map placement */
-      .our-location-section {
-        margin-top: 100px; /* Push the map down */
-        text-align: center;
-      }
-
-      .map-title {
-        font-family: "Inknut Antiqua", serif;
-        font-size: 24px;
-        color: #8b0000;
-        margin-bottom: 20px;
-      }
-
       #map {
-        width: 80%;
-        height: 400px;
-        margin: 0 auto 50px auto;
+        width: 100%; /* Matches the placeholder */
+        height: 532px; /* Matches the placeholder height */
+        position: absolute;
+        top: 256px; /* Matches the placeholder position */
+        left: 173px; /* Matches the placeholder position */
         border-radius: 8px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-      }
-
-      /* Additional Spacing Fix */
-      .we-offer-apartments {
-        margin-bottom: 50px;
-      }
-
-      .airbnb-embed-frame {
-        margin-bottom: 50px;
       }
     </style>
   </head>
@@ -66,54 +45,16 @@
           <div class="rectangle-3"></div>
           <div class="rectangle-7"></div>
           <div class="our-chalets our">OUR CHALETS</div>
+          <div class="our-location our">OUR LOCATION</div>
           <p class="we-offer-apartments">
             We offer apartments located in the stunning Italian Alps near Cervinia. Perfect for skiing, hiking, or
             relaxing in the beautiful mountain landscape.
           </p>
           <div class="rectangle-5"></div>
 
-          <!-- Airbnb Embed 1 -->
-          <div
-            class="airbnb-embed-frame"
-            data-id="979009583861992990"
-            data-view="home"
-            data-hide-price="true"
-            style="width: 525px; height: 532px; position: absolute; top: 256px; left: 173px;"
-          >
-            <a href="https://www.airbnb.it/rooms/979009583861992990?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">Visto su Airbnb</a>
-            <a
-              href="https://www.airbnb.it/rooms/979009583861992990?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget"
-              rel="nofollow"
-            >
-              Chalet · Valtournenche · ★4.67 · 1 camera da letto · 1 letto · 1 bagno
-            </a>
-            <script async src="https://www.airbnb.it/embeddable/airbnb_jssdk"></script>
-          </div>
-
-          <!-- Airbnb Embed 2 -->
-          <div
-            class="airbnb-embed-frame"
-            data-id="1189233581383934270"
-            data-view="home"
-            data-hide-price="true"
-            style="width: 523px; height: 532px; position: absolute; top: 256px; left: 682px;"
-          >
-            <a href="https://www.airbnb.it/rooms/1189233581383934270?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">Visto su Airbnb</a>
-            <a
-              href="https://www.airbnb.it/rooms/1189233581383934270?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget"
-              rel="nofollow"
-            >
-              Chalet · Valtournenche · ★4.75 · 2 camere da letto · 2 letti · 2 bagni
-            </a>
-            <script async src="https://www.airbnb.it/embeddable/airbnb_jssdk"></script>
-          </div>
-
-          <!-- Google Maps Section -->
-          <div class="our-location-section">
-            <h2 class="map-title">OUR LOCATION</h2>
-            <div id="map"></div>
-          </div>
-          <!-- End Google Maps Section -->
+          <!-- Google Map -->
+          <div id="map"></div>
+          <!-- End Google Map -->
 
           <div class="ussinchaletgmailcom-39-0123-456789">ussinchalet@gmail.com<br />+39 0123 456789</div>
           <p class="x2024-your-chalet-a kannadamn-regular-normal-vista-white-14px">
