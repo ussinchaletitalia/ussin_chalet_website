@@ -10,6 +10,13 @@
     <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="css/globals.css" />
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfmLbJ-Xc-oaIuoFs1NuPRB6FygUWCyY0"></script>
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+        margin: 20px 0;
+      }
+    </style>
     <script>
       function initMap() {
         const location = { lat: 45.88694, lng: 7.62031 }; // Coordinates for Ussin Chalet
@@ -25,7 +32,7 @@
       }
     </script>
   </head>
-  <body style="margin: 0; background: #ffffff" onload="initMap()">
+  <body style="margin: 0; background: #ffffff">
     <input type="hidden" id="anPageName" name="page" value="desktop-chalets" />
     <div class="container-center-horizontal">
       <div class="desktop-chalets screen">
@@ -50,8 +57,8 @@
 
           <div class="ussinchaletgmailcom-39-0123-456789">ussinchalet@gmail.com<br />+39 0123 456789</div>
           <p class="x2024-your-chalet-a kannadamn-regular-normal-vista-white-14px">
-            <span class="kannadamn-regular-normal-vista-white-14px">© </span
-            ><span class="span1">2024 Your Chalet and Apartment Rentals - All rights reserved</span>
+            <span class="kannadamn-regular-normal-vista-white-14px">© </span>
+            <span class="span1">2024 Your Chalet and Apartment Rentals - All rights reserved</span>
           </p>
           <div class="contact-us">CONTACT US</div>
           <div class="overlap-group">
@@ -69,5 +76,5 @@
         </div>
       </div>
     </div>
-  </body>
-</html>
+    <script>
+      window.onload = initMap; // Ensures map init
