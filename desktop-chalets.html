@@ -2,6 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <!--<meta name=description content="This site was generated with Anima. www.animaapp.com"/>-->
+    <!-- <link rel="shortcut icon" type=image/png href="https://animaproject.s3.amazonaws.com/home/favicon.png" /> -->
     <meta name="viewport" content="width=1280, maximum-scale=1.0" />
     <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
     <meta name="og:type" content="website" />
@@ -30,17 +32,20 @@
         width: 100%;
         border-radius: 16px; /* Curved edges */
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        margin-top: 20px;
+        margin: 20px auto; /* Center the map and add spacing */
+        max-width: 800px; /* Restrict the map width */
       }
 
       .airbnb-section {
         display: flex;
         justify-content: space-around;
-        margin: 20px 0;
+        gap: 20px; /* Spacing between Airbnb embeds */
+        margin: 40px 0;
       }
 
       .airbnb-frame {
         width: 45%;
+        aspect-ratio: 16 / 9; /* Maintain consistent aspect ratio */
         border: 1px solid #ddd;
         border-radius: 8px;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -71,12 +76,14 @@
               src="https://www.airbnb.it/embed/rooms/979009583861992990?locale=en"
               frameborder="0"
               allowfullscreen
+              title="Chalet 1"
             ></iframe>
             <iframe
               class="airbnb-frame"
               src="https://www.airbnb.it/embed/rooms/1189233581383934270?locale=en"
               frameborder="0"
               allowfullscreen
+              title="Chalet 2"
             ></iframe>
           </div>
           <!-- End Airbnb Section -->
@@ -94,17 +101,17 @@
           <div class="overlap-group">
             <div class="rectangle-6"></div>
             <div class="our-chalets-1">OUR CHALETS</div>
-            <a href="desktop-contact-us.html"><div class="contact-us-1">CONTACT US</div> </a
-            ><a href="desktop-homepage.html"
-              ><img
+            <a href="desktop-contact-us.html"><div class="contact-us-1">CONTACT US</div></a>
+            <a href="desktop-homepage.html">
+              <img
                 class="ussi-chalet_logo-white-1"
                 src="img/ussi-chalet-logo-white-1.png"
                 alt="Ussi-Chalet_logo-white 1"
               />
             </a>
           </div>
-          <a href="desktop-contact-us.html"><img class="group-22" src="img/group-22-1.png" alt="Group 22" /> </a
-          ><img
+          <a href="desktop-contact-us.html"><img class="group-22" src="img/group-22-1.png" alt="Group 22" /></a>
+          <img
             class="screenshot-2025-01-10-at-095533-1"
             src="img/screenshot-2025-01-10-at-09-55-33-1@2x.png"
             alt="Screenshot 2025-01-10 at 09.55.33 1"
