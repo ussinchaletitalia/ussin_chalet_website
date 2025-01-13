@@ -9,8 +9,23 @@
     <link rel="stylesheet" type="text/css" href="css/desktop-chalets.css" />
     <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="css/globals.css" />
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfmLbJ-Xc-oaIuoFs1NuPRB6FygUWCyY0"></script>
+    <script>
+      function initMap() {
+        const location = { lat: 45.88694, lng: 7.62031 }; // Coordinates for Ussin Chalet
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 14,
+          center: location,
+        });
+        const marker = new google.maps.Marker({
+          position: location,
+          map: map,
+          title: "Ussin Chalet",
+        });
+      }
+    </script>
   </head>
-  <body style="margin: 0; background: #ffffff">
+  <body style="margin: 0; background: #ffffff" onload="initMap()">
     <input type="hidden" id="anPageName" name="page" value="desktop-chalets" />
     <div class="container-center-horizontal">
       <div class="desktop-chalets screen">
@@ -62,6 +77,10 @@
             </a>
             <script async src="https://www.airbnb.it/embeddable/airbnb_jssdk"></script>
           </div>
+
+          <!-- Google Maps Embed -->
+          <div id="map" style="width: 600px; height: 400px; margin: 50px auto; position: relative;"></div>
+          <!-- End Google Maps Embed -->
 
           <div class="ussinchaletgmailcom-39-0123-456789">ussinchalet@gmail.com<br />+39 0123 456789</div>
           <p class="x2024-your-chalet-a kannadamn-regular-normal-vista-white-14px">
