@@ -1,0 +1,31 @@
+:root { 
+  --black: #000000;
+  --dark-tan: #671212;
+  --dawn-pink: #f4ebe8;
+  --vista-white: #fcf7f7;
+  --white: #ffffff;
+ 
+  --font-size-l: 18px;
+  --font-size-m: 14px;
+  --font-size-xl: 20px;
+  --font-size-xxl: 23px;
+ 
+  --font-family-inknut_antiqua: "Inknut Antiqua", Helvetica;
+  --font-family-kannada_mn-regular: "Kannada MN-Regular", Helvetica;
+  --font-family-kantumruy: "Kantumruy", Helvetica;
+}
+.kannadamn-regular-normal-vista-white-14px {
+  color: var(--vista-white);
+  font-family: var(--font-family-kannada_mn-regular);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.kantumruy-normal-dark-tan-18px {
+  color: var(--dark-tan);
+  font-family: var(--font-family-kantumruy);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}

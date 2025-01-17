@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1280, maximum-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="https://animaproject.s3.amazonaws.com/home/favicon.png"
+    />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="css/desktop-contact-us.css" />
+    <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
+    <link rel="stylesheet" type="text/css" href="css/globals.css" />
+    <style>
+      /* Form Container Styling */
+      .form-container {
+        position: relative; /* Ensure positioning context */
+        background-color: #f9f5f2;
+        border-radius: 12px;
+        padding: 20px;
+        width: 90%;
+        max-width: 600px;
+        margin: 40px auto; /* Center horizontally */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 999; /* Ensure the form appears above all */
+      }
+
+      .form-container label {
+        display: block;
+        margin-bottom: 10px;
+        font-family: 'Kantumruy', sans-serif;
+        color: #64442f;
+        font-size: 16px;
+      }
+
+      .form-container input,
+      .form-container textarea {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #64442f;
+        border-radius: 5px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        font-size: 14px;
+      }
+
+      .form-container button {
+        display: block;
+        width: 100%;
+        background-color: #8a4d41;
+        color: white;
+        padding: 12px;
+        font-family: 'Inknut Antiqua', serif;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .form-container button:hover {
+        background-color: #6c3a30;
+      }
+    </style>
+  </head>
+  <body style="margin: 0; background: #ffffff">
+    <input type="hidden" id="anPageName" name="page" value="desktop-contact-us" />
+    <div class="container-center-horizontal">
+      <div class="desktop-contact-us screen">
+        <div class="overlap-group2">
+          <div class="rectangle-4"></div>
+          <div class="top-navigation">
+            <a href="index.html">
+              <img class="ussi-chalet-logo" src="img/ussi-chalet-logo-white-1.png" alt="Ussin Chalet Logo" />
+            </a>
+            <div class="nav-buttons">
+              <a href="desktop-chalets.html" class="nav-button">OUR CHALETS</a>
+              <a href="desktop-contact-us.html" class="nav-button">CONTACT US</a>
+            </div>
+          </div>
+          <div class="contact-us">CONTACT US</div>
+          <p class="ussinchaletgmailcom-39-0123-456789">
+            ussinchalet@gmail.com&nbsp;&nbsp; |&nbsp;&nbsp;+39 0123 456789
+          </p>
+          <!-- Embedded Formspree Form -->
+          <div class="form-container">
+            <form action="https://formspree.io/f/xkggklva" method="POST">
+              <label>
+                Your email:
+                <input type="email" name="email" required />
+              </label>
+              <label>
+                Your message:
+                <textarea name="message" rows="5" required></textarea>
+              </label>
+              <button type="submit">Send</button>
+            </form>
+          </div>
+          <div class="overlap-group1">
+            <div class="rectangle-7"></div>
+            <p class="x2024-your-chalet-a kannadamn-regular-normal-vista-white-14px">
+              <span class="kannadamn-regular-normal-vista-white-14px">© </span
+              ><span class="span1">2024 Your Chalet and Apartment Rentals - All rights reserved</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
