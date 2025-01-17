@@ -1,20 +1,60 @@
 /* screen - desktop-chalets */
 
+/* screen - desktop-chalets */
+
 .desktop-chalets {
   align-items: flex-start;
   background-color: var(--white);
   display: flex;
-  height: 2008px;
-  overflow: hidden;
+  height: auto; /* Changed from fixed height to auto to adapt */
+  overflow: visible;
   width: 1280px;
 }
 
 .desktop-chalets .overlap-group1 {
-  height: 2349px;
+  height: auto; /* Allow height to adjust dynamically */
   margin-left: -32px;
   position: relative;
   width: 1373px;
 }
+
+.desktop-chalets .our-location {
+  color: var(--dark-tan);
+  font-family: var(--font-family-inknut_antiqua);
+  font-size: var(--font-size-xxl);
+  font-weight: 700;
+  text-align: center;
+  margin-top: -70px; /* Reduce space above the heading */
+  margin-bottom: -20px; /* Reduce space below the heading */
+  position: relative;
+  z-index: 1000; /* Ensure it stays above the map */
+}
+
+.desktop-chalets .map-container {
+  position: relative;
+  margin: 0 auto; /* Center the map container */
+  margin-top: 50px; /* Add space above the map */
+  width: 800px; /* Adjust the map width */
+  height: 450px; /* Adjust the map height */
+  border-radius: 16px;
+  overflow: hidden;
+  z-index: 0; /* Ensure it doesn't overlap other elements */
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+/* Ensure other elements stay properly aligned */
+.desktop-chalets .airbnb-listings {
+  margin-bottom: 50px; /* Space between Airbnb cards and the map */
+}
+
+.desktop-chalets .contact-us {
+  margin-top: 30px; /* Ensure the button aligns properly */
+}
+
 
 .desktop-chalets .rectangle-4 {
   background-color: var(--vista-white);
@@ -114,7 +154,7 @@
   line-height: normal;
   position: absolute;
   text-align: center;
-  top: 1797px;
+  top: 1800px;
   width: 317px;
 }
 
@@ -138,7 +178,7 @@
   line-height: normal;
   position: absolute;
   text-align: center;
-  top: 1738px;
+  top: 1700px;
   width: 312px;
 }
 
@@ -264,25 +304,26 @@
   width: 624px;
 }
 
-/* Airbnb Section */
-.desktop-chalets .airbnb-section {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
+.desktop-chalets .map-container {
+  position: absolute;
+  top: 1121px;
+  left: 50%;         /* Start from the center */
+  width: 800px;      /* The narrower width you want */
+  height: 450px;     /* Adjust height as needed */
+  margin-left: -400px; /* Negative half the width, to center on the page */
+  border-radius: 16px;
+  overflow: hidden;   /* So corners are truly curved */
+  z-index: 999;
+  }
+  
 }
 
-.desktop-chalets .airbnb-frame {
-  width: 45%;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Google Maps Section */
-.desktop-chalets #map {
-  height: 400px;
-  width: 100%;
-  border-radius: 16px; /* Rounded edges for the map */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  margin-top: 30px;
+/* Expand #map to fill the container */
+.desktop-chalets .our-location {
+  color: var(--dark-tan);
+  font-family: var(--font-family-inknut_antiqua);
+  font-size: var(--font-size-xxl);
+  font-weight: 700;
+  text-align: center;
+  margin-top: 50px; /* Adjust spacing as needed */
 }
