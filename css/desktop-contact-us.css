@@ -187,3 +187,46 @@
   position: absolute;
   width: 181px;
 }
+
+/* Navigation Bar */
+.top-navigation {
+  display: flex;
+  justify-content: space-between; /* Space between logo and buttons */
+  align-items: center;
+  background-color: var(--dark-tan);
+  padding: 10px 20px;
+  z-index: 10; /* Ensure it's above other elements */
+  position: relative;
+  width: 100%; /* Full width */
+}
+
+.ussi-chalet-logo {
+  height: 50px; /* Adjust to fit your layout */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image scales properly */
+  margin-right: auto; /* Align it to the left */
+  display: block; /* Ensure it behaves as expected */
+}
+
+
+/* Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  gap: 30px; /* Add space between buttons */
+}
+
+.nav-button {
+  font-family: var(--font-family-inknut_antiqua);
+  font-size: var(--font-size-l);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px; /* Clickable padding */
+  transition: color 0.3s ease;
+}
+
+.nav-button:hover {
+  color: var(--dawn-pink); /* Highlight on hover */
+}
+
+
