@@ -10,7 +10,6 @@
   src: url("../fonts/KannadaMN-01.ttf") format("truetype");
 }
 
-
 .screen a {
   display: contents;
   text-decoration: none;
@@ -33,6 +32,38 @@
   box-sizing: border-box;
 }
 
+/* Disable text selection */
+body, html, * {
+  user-select: none; /* Prevent text selection */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE/Edge */
+  -moz-user-select: none; /* Firefox */
+}
+
+/* Disable right-click */
+body, html {
+  -webkit-touch-callout: none; /* Disable callout (long press) on mobile */
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+}
+
+/* Disable copying */
+body, html, img, video, a {
+  pointer-events: none; /* Prevent interactions */
+}
+
+/* Prevent image dragging */
+img {
+  -webkit-user-drag: none; /* Disable dragging in WebKit browsers */
+  user-drag: none;
+}
+
+/* Optional: Protect links while keeping navigation functional */
+a {
+  pointer-events: auto; /* Allow link clicks if needed */
+  text-decoration: none;
+}
+
+/* Span styling */
 .span1 {
   color: var(--vista-white);
   font-family: var(--font-family-kantumruy);
