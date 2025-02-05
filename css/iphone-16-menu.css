@@ -1,0 +1,405 @@
+/* screen - iphone-16-menu */
+
+.iphone-16-menu {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 232px;
+  height: 852px;
+  overflow: hidden;
+  width: 393px;
+}
+
+.iphone-16-menu .flex-row {
+  align-items: flex-start;
+  display: flex;
+  gap: 14033px;
+  height: 1422px;
+  margin-left: -14954.52px;
+  min-width: 16242px;
+}
+
+.iphone-16-menu .overlap-group4 {
+  align-self: flex-end;
+  height: 476px;
+  position: relative;
+  width: 467px;
+}
+
+.iphone-16-menu .group-24 {
+  height: 49px;
+  left: 246px;
+  position: absolute;
+  top: 394px;
+  width: 48px;
+}
+
+.iphone-16-menu .group-25 {
+  cursor: pointer;
+  height: 42px;
+  left: 183px;
+  position: absolute;
+  top: 279px;
+  width: 174px;
+}
+
+.iphone-16-menu .group-26 {
+  cursor: pointer;
+  height: 42px;
+  left: 183px;
+  position: absolute;
+  top: 334px;
+  width: 174px;
+}
+
+.iphone-16-menu .screenshot-2025-01-10-at-095542-1 {
+  height: 476px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 467px;
+}
+
+.iphone-16-menu .flex-col {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 319px;
+  min-height: 1217px;
+  width: 1742px;
+}
+
+.iphone-16-menu .overlap-group-container {
+  height: 852px;
+  position: relative;
+  width: 1742px;
+}
+
+.iphone-16-menu .overlap-group3 {
+  height: 852px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1742px;
+}
+
+.iphone-16-menu .rectangle-4 {
+  background-color: var(--vista-white);
+  height: 783px;
+  left: 454px;
+  position: absolute;
+  top: 19px;
+  width: 393px;
+}
+
+.iphone-16-menu .our-chalets {
+  color: var(--white);
+  left: 799px;
+  position: absolute;
+  top: 152px;
+}
+
+.iphone-16-menu .our-chalets-1 {
+  color: var(--dawn-pink);
+  font-weight: 700;
+  left: 1327px;
+  text-align: center;
+  top: 24px;
+}
+
+.iphone-16-menu .contact-us {
+  color: var(--white);
+  cursor: pointer;
+  font-family: var(--font-family-kantumruy);
+  font-size: var(--font-size-l);
+  font-weight: 400;
+  left: 1499px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 24px;
+  width: 243px;
+}
+
+.iphone-16-menu .rectangle-7 {
+  background-color: var(--dark-tan);
+  box-shadow: 0px 4px 4px #0000004c , 0px 8px 12px 6px #00000026;
+  height: 84px;
+  left: 0;
+  position: absolute;
+  top: 768px;
+  width: 1280px;
+}
+
+.iphone-16-menu .x2024-your-chalet-a {
+  left: 504px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 784px;
+  width: 296px;
+}
+
+.iphone-16-menu .contact-us-1 {
+  color: var(--dark-tan);
+  font-family: var(--font-family-inknut_antiqua);
+  font-size: var(--font-size-xl);
+  left: 359px;
+  letter-spacing: 5.28px;
+  text-align: center;
+  top: 158px;
+  width: 585px;
+}
+
+.iphone-16-menu .ussinchaletgmailcom-39-0123-456789 {
+  color: var(--black);
+  font-family: var(--font-family-kantumruy);
+  font-size: var(--font-size-l);
+  font-weight: 400;
+  left: 510px;
+  letter-spacing: 0;
+  line-height: 28px;
+  position: absolute;
+  text-align: center;
+  top: 212px;
+  width: 282px;
+}
+
+.iphone-16-menu .group-7 {
+  align-items: flex-start;
+  background-color: var(--dark-tan);
+  border-radius: 36px;
+  display: flex;
+  height: 43px;
+  left: 630px;
+  min-width: 43px;
+  padding: 9.8px 9.8px;
+  position: absolute;
+  top: 121px;
+}
+
+.iphone-16-menu .group {
+  height: 23px;
+  width: 23px;
+}
+
+.iphone-16-menu .overlap-group1 {
+  height: 441px;
+  left: 474px;
+  position: absolute;
+  top: 319px;
+  width: 355px;
+}
+
+.iphone-16-menu .rectangle-8 {
+  background-color: var(--dawn-pink);
+  border-radius: 12px;
+  height: 419px;
+  left: 7px;
+  position: absolute;
+  top: 0;
+  width: 343px;
+}
+
+.iphone-16-menu .your-name {
+  top: 13px;
+  width: 154px;
+}
+
+.iphone-16-menu .rectangle-9 {
+  background-color: var(--white);
+  border: 2px solid;
+  border-color: var(--dark-tan);
+  border-radius: 6px;
+  height: 38px;
+  left: 25px;
+  position: absolute;
+  top: 44px;
+  width: 306px;
+}
+
+.iphone-16-menu .rectangle-12 {
+  background-color: var(--white);
+  border: 2px solid;
+  border-color: var(--dark-tan);
+  border-radius: 6px;
+  height: 38px;
+  left: 25px;
+  position: absolute;
+  top: 119px;
+  width: 306px;
+}
+
+.iphone-16-menu .your-email {
+  top: 88px;
+  width: 160px;
+}
+
+.iphone-16-menu .your-message {
+  top: 165px;
+  width: 290px;
+}
+
+.iphone-16-menu .rectangle-11 {
+  background-color: var(--white);
+  border: 2px solid;
+  border-color: var(--dark-tan);
+  border-radius: 6px;
+  height: 134px;
+  left: 25px;
+  position: absolute;
+  top: 196px;
+  width: 306px;
+}
+
+.iphone-16-menu .group-22 {
+  height: 101px;
+  left: 0;
+  position: absolute;
+  top: 340px;
+  width: 355px;
+}
+
+.iphone-16-menu .rectangle-6 {
+  background-color: var(--dark-tan);
+  box-shadow: 0px 4px 4px #00000040;
+  height: 202px;
+  left: 454px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+}
+
+.iphone-16-menu .ussi-chalet_logo-white-1 {
+  cursor: pointer;
+  height: 43px;
+  left: 585px;
+  object-fit: cover;
+  position: absolute;
+  top: 19px;
+  width: 132px;
+}
+
+.iphone-16-menu .group-32 {
+  align-items: flex-start;
+  cursor: pointer;
+  display: flex;
+  height: 20px;
+  left: 479px;
+  min-width: 22px;
+  padding: 0 0.6px;
+  position: absolute;
+  top: 24px;
+}
+
+.iphone-16-menu .line-container {
+  height: 21px;
+  margin-top: -1.5px;
+  position: relative;
+  width: 21px;
+}
+
+.iphone-16-menu .line-4 {
+  height: 20px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 20px;
+}
+
+.iphone-16-menu .line-5 {
+  height: 20px;
+  left: 1px;
+  position: absolute;
+  top: 1px;
+  width: 20px;
+}
+
+.iphone-16-menu .our-chalets-2 {
+  color: var(--white);
+  cursor: pointer;
+  font-weight: 400;
+  left: 481px;
+  top: 101px;
+}
+
+.iphone-16-menu .contact-us-2 {
+  color: var(--dawn-pink);
+  font-family: var(--font-family-kantumruy);
+  font-size: var(--font-size-l);
+  left: 481px;
+  letter-spacing: 0;
+  top: 141px;
+  width: 243px;
+}
+
+.iphone-16-menu .overlap-group {
+  height: 119px;
+  left: 1182px;
+  position: absolute;
+  top: 364px;
+  width: 442px;
+}
+
+.iphone-16-menu .authentic-alpine-living {
+  color: var(--black);
+  font-family: var(--font-family-inknut_antiqua);
+  font-size: var(--font-size-l);
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 87px;
+  width: 442px;
+}
+
+.iphone-16-menu .our-location {
+  color: var(--dark-tan);
+  margin-left: 480.2px;
+  min-height: 46px;
+}
+
+.iphone-16-menu .group-27 {
+  cursor: pointer;
+  height: 45px;
+  margin-left: -15103px;
+  width: 219px;
+}
+
+.iphone-16-menu .contact-us-3 {
+  font-weight: 700;
+  line-height: normal;
+  position: absolute;
+}
+
+.iphone-16-menu .our {
+  font-family: var(--font-family-inknut_antiqua);
+  font-size: var(--font-size-xxl);
+  font-weight: 700;
+  letter-spacing: 5.52px;
+  line-height: normal;
+  text-align: center;
+  width: 624px;
+}
+
+.iphone-16-menu .our-chalets-3 {
+  font-family: var(--font-family-kantumruy);
+  font-size: var(--font-size-l);
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  width: 243px;
+}
+
+.iphone-16-menu .your {
+  left: 28px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+}

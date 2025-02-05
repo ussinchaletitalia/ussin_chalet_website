@@ -1,0 +1,181 @@
+/* screen - iphone-16-homepage */
+
+.iphone-16-homepage {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  gap: 13157px;
+  height: 852px;
+  overflow: hidden;
+  width: 393px;
+}
+
+.iphone-16-homepage .group-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: -14891px;
+  margin-top: 229px;
+  min-height: 992px;
+  width: 1280px;
+}
+
+.iphone-16-homepage .group-25 {
+  height: 42px;
+  margin-right: 2.0px;
+  width: 174px;
+}
+
+.iphone-16-homepage .group-26 {
+  height: 42px;
+  margin-right: 2.0px;
+  margin-top: 13px;
+  width: 174px;
+}
+
+.iphone-16-homepage .group-24 {
+  height: 49px;
+  margin-right: 2.0px;
+  margin-top: 18px;
+  width: 48px;
+}
+
+.iphone-16-homepage .overlap-group1 {
+  height: 687px;
+  margin-top: 141px;
+  position: relative;
+  width: 1280px;
+}
+
+.iphone-16-homepage .group-23 {
+  height: 64px;
+  left: 0;
+  position: absolute;
+  top: 106px;
+  width: 1280px;
+}
+
+.iphone-16-homepage .img_5418-1 {
+  height: 687px;
+  left: 125px;
+  width: 320px;
+}
+
+.iphone-16-homepage .overlap-group-container {
+  height: 868px;
+  margin-top: -16px;
+  position: relative;
+  width: 1627px;
+}
+
+.iphone-16-homepage .overlap-group2 {
+  height: 868px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+}
+
+.iphone-16-homepage .img_5418-2 {
+  height: 847px;
+  left: 423px;
+  object-fit: cover;
+  width: 429px;
+}
+
+.iphone-16-homepage .rectangle-7 {
+  background-color: var(--dark-tan);
+  box-shadow: 0px 4px 4px #0000004c , 0px 8px 12px 6px #00000026;
+  height: 84px;
+  left: 0;
+  position: absolute;
+  top: 784px;
+  width: 1280px;
+}
+
+.iphone-16-homepage .x2024-your-chalet-a {
+  left: 504px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 800px;
+  width: 296px;
+}
+
+.iphone-16-homepage .authentic-alpine-living {
+  color: var(--white);
+  font-family: var(--font-family-inknut_antiqua);
+  font-size: var(--font-size-l);
+  font-weight: 400;
+  left: 431px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 236px;
+  width: 442px;
+}
+
+.iphone-16-homepage .group-7 {
+  height: 105px;
+  left: 599px;
+  position: absolute;
+  top: 522px;
+  width: 104px;
+}
+
+.iphone-16-homepage .group-13 {
+  cursor: pointer;
+  height: 98px;
+  left: 486px;
+  position: absolute;
+  top: 381px;
+  width: 333px;
+}
+
+.iphone-16-homepage .group-14 {
+  cursor: pointer;
+  height: 98px;
+  left: 486px;
+  position: absolute;
+  top: 452px;
+  width: 333px;
+}
+
+.iphone-16-homepage .ussi-chalet_logo-white-2 {
+  cursor: pointer;
+  height: 88px;
+  left: 507px;
+  object-fit: cover;
+  position: absolute;
+  top: 148px;
+  width: 287px;
+}
+
+.iphone-16-homepage .overlap-group {
+  height: 119px;
+  left: 1182px;
+  position: absolute;
+  top: 380px;
+  width: 442px;
+}
+
+.iphone-16-homepage .authentic-alpine-living-1 {
+  color: var(--black);
+  font-family: var(--font-family-inknut_antiqua);
+  font-size: var(--font-size-l);
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 87px;
+  width: 442px;
+}
+
+.iphone-16-homepage .img_5418 {
+  position: absolute;
+  top: 0;
+}

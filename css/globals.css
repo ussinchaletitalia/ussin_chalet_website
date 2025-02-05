@@ -1,5 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-@import url("https://fonts.googleapis.com/css?family=Inknut+Antiqua:700,400|Kantumruy:400,700");
+@import url("https://fonts.googleapis.com/css?family=Kantumruy:400,700|Inknut+Antiqua:400,700");
 /* The following line is used to measure usage of this code. You can remove it if you want. */
 @import url("https://px.animaapp.com/67641ddb9dd622189e0bac46.67641ddc9dd622189e0bac49.iQToBC7.hcp.png");
 
@@ -9,6 +9,7 @@
   font-weight: 400;
   src: url("../fonts/KannadaMN-01.ttf") format("truetype");
 }
+
 
 .screen a {
   display: contents;
@@ -28,45 +29,55 @@
   pointer-events: auto;
 }
 
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
 * {
   box-sizing: border-box;
 }
 
-/* Disable text selection */
-body, html, * {
-  user-select: none; /* Prevent text selection */
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE/Edge */
-  -moz-user-select: none; /* Firefox */
-}
-
-/* Disable right-click */
-body, html {
-  -webkit-touch-callout: none; /* Disable callout (long press) on mobile */
-  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
-}
-
-/* Disable copying */
-body, html, img, video, a {
-  pointer-events: none; /* Prevent interactions */
-}
-
-/* Prevent image dragging */
-img {
-  -webkit-user-drag: none; /* Disable dragging in WebKit browsers */
-  user-drag: none;
-}
-
-/* Optional: Protect links while keeping navigation functional */
-a {
-  pointer-events: auto; /* Allow link clicks if needed */
-  text-decoration: none;
-}
-
-/* Span styling */
 .span1 {
   color: var(--vista-white);
   font-family: var(--font-family-kantumruy);
   font-size: var(--font-size-m);
   font-weight: 400;
+}
+
+.ussi-chalet_logo-1 {
+  height: 89px;
+  left: 83px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 277px;
 }
