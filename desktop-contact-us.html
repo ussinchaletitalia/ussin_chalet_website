@@ -7,10 +7,109 @@
     <meta name="og:type" content="website" />
     <meta name="twitter:card" content="photo" />
 
-    <!-- External Stylesheets -->
+    <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="css/desktop-contact-us.css" />
     <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="css/globals.css" />
+
+    <style>
+        /* Navigation Bar */
+        .top-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--dark-tan);
+            padding: 15px 30px;
+            width: 100%;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Chalet Logo */
+        .ussi-chalet-logo {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+            margin-right: auto;
+        }
+
+        /* Navigation Buttons */
+        .nav-buttons {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            gap: 100px; /* Adds proper spacing */
+        }
+
+        .nav-button {
+            font-family: var(--font-family-inknut_antiqua);
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--white);
+            text-decoration: none;
+            padding: 12px 20px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-button:hover {
+            color: var(--dawn-pink);
+        }
+
+        /* Form Container Styling */
+        .form-container {
+            position: relative;
+            background-color: #f9f5f2;
+            border-radius: 12px;
+            padding: 20px;
+            width: 90%;
+            max-width: 600px;
+            margin: 40px auto;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+            font-family: 'Kantumruy', sans-serif;
+            color: #64442f;
+            font-size: 16px;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #64442f;
+            border-radius: 5px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .form-container button {
+            display: block;
+            width: 100%;
+            background-color: #8a4d41;
+            color: white;
+            padding: 12px;
+            font-family: 'Inknut Antiqua', serif;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #6c3a30;
+        }
+    </style>
 </head>
 
 <body style="margin: 0; background: #ffffff">
