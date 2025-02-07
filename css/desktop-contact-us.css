@@ -212,16 +212,22 @@
 /* Navigation Buttons */
 .nav-buttons {
   display: flex;
-  gap: 30px; /* Add space between buttons */
+  justify-content: space-evenly; /* Ensures even spacing */
+  align-items: center;
+  width: 100%; /* Ensures full width */
+  max-width: 800px; /* Prevents buttons from stretching too far */
+  margin: 0 auto; /* Centers the navigation */
 }
 
 .nav-button {
-  font-family: var(--font-family-inknut_antiqua);
-  font-size: var(--font-size-l);
+  font-family: var(--font-family-inknut_antiqua); /* Ensure same font */
+  font-size: 24px; /* Adjust size to match the correct version */
+  font-weight: 700; /* Make it bold */
+  letter-spacing: 2px; /* Add spacing between letters */
   color: var(--white);
   text-decoration: none;
-  font-weight: bold;
-  padding: 10px 15px; /* Clickable padding */
+  text-transform: uppercase; /* Ensure text is uppercase */
+  padding: 10px 15px; /* Clickable area */
   transition: color 0.3s ease;
 }
 
