@@ -208,7 +208,6 @@
   display: block; /* Ensure it behaves as expected */
 }
 
-
 /* Navigation Buttons */
 .nav-buttons {
   display: flex;
@@ -227,7 +226,7 @@
   color: var(--white);
   text-decoration: none;
   text-transform: uppercase; /* Ensure text is uppercase */
-  padding: 10px 15px; /* Clickable area */
+  padding: 10px 30px; /* Increase padding to separate buttons */
   transition: color 0.3s ease;
 }
 
