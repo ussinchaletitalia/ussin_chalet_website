@@ -1,55 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--<meta name=description content="This site was generated with Anima. www.animaapp.com"/>-->
+    <!-- <link rel="shortcut icon" type=image/png href="https://animaproject.s3.amazonaws.com/home/favicon.png" /> -->
+    <meta name="viewport" content="width=1280, maximum-scale=1.0" />
     <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
     <meta name="og:type" content="website" />
     <meta name="twitter:card" content="photo" />
-
-    <!-- Global Styles -->
-    <link rel="stylesheet" type="text/css" href="css/globals.css" />
+    <link rel="stylesheet" type="text/css" href="css/desktop-homepage.css" />
     <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
+    <link rel="stylesheet" type="text/css" href="css/globals.css" />
 
-    <!-- Default Desktop Styles -->
-    <link rel="stylesheet" type="text/css" href="css/desktop-homepage.css" media="screen and (min-width: 769px)" />
-
-    <!-- Mobile Styles -->
-    <link rel="stylesheet" type="text/css" href="css/iphone-16-homepage.css" media="screen and (max-width: 768px)" />
-</head>
-<body style="margin: 0; background: #ffffff">
-    <input type="hidden" id="anPageName" name="page" value="homepage" />
-
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+      window.location.replace("/mobile/");
+    }
+  });
+</script>
+    
+  </head>
+  <body style="margin: 0; background: #ffffff">
+    <input type="hidden" id="anPageName" name="page" value="desktop-homepage" />
     <div class="container-center-horizontal">
-        <div class="homepage screen">
-
-            <!-- Shared Content -->
-            <div class="group-container">
-                <img class="ussi-chalet_logo" src="img/ussi-chalet-logo-1.png" alt="Ussi-Chalet_logo" />
-                <div class="authentic-alpine-living">AUTHENTIC ALPINE LIVING</div>
-            </div>
-
-            <!-- Desktop Content (Only Visible on Large Screens) -->
-            <div class="desktop-content">
-                <div class="group-container-1">
-                    <img class="group-7" src="img/group-7@2x.png" alt="Group 7" />
-                    <a href="desktop-chalets.html"><img class="group-13" src="img/group-13@2x.png" alt="Group 13" /></a>
-                    <a href="desktop-contact-us.html"><img class="group-14" src="img/group-14@2x.png" alt="Group 14" /></a>
-                </div>
-                <img class="group-21" src="img/group-21.png" alt="Group 21" />
-            </div>
-
-            <!-- Mobile Content (Only Visible on Small Screens) -->
-            <div class="mobile-content">
-                <div class="overlap-group1">
-                    <img class="group-23" src="img/img-5418-2.png" alt="Winter Chalet View" />
-                </div>
-                <div class="content-section">
-                    <p>Your mobile content here...</p>
-                </div>
-            </div>
-
+      <div class="desktop-homepage screen">
+        <div class="group-container">
+          <div class="overlap-group">
+            <img class="ussi-chalet_logo-1" src="img/ussi-chalet-logo-1.png" alt="Ussi-Chalet_logo 1" />
+            <div class="authentic-alpine-living">AUTHENTIC ALPINE LIVING</div>
+          </div>
+          <div class="group-container-1">
+            <img class="group-7" src="img/group-7@2x.png" alt="Group 7" />
+            <a href="desktop-chalets.html"><img class="group-13" src="img/group-13@2x.png" alt="Group 13" /> </a
+            ><a href="desktop-contact-us.html"><img class="group-14" src="img/group-14@2x.png" alt="Group 14" /> </a>
+          </div>
+          <img class="group-21" src="img/group-21.png" alt="Group 21" />
         </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
