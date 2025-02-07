@@ -10,14 +10,6 @@
   width: 393px;
 }
 
-/* Set winter image as background for mobile */
-body {
-  background-image: url("../img/img-5418-2.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .iphone-16-homepage .group-container {
   align-items: center;
   display: flex;
@@ -55,13 +47,18 @@ body {
   width: 1280px;
 }
 
-/* Ensure winter image is used correctly */
-.iphone-16-homepage .group-23,
+.iphone-16-homepage .group-23 {
+  height: 64px;
+  left: 0;
+  position: absolute;
+  top: 106px;
+  width: 1280px;
+}
+
 .iphone-16-homepage .img_5418-1 {
   height: 687px;
   left: 125px;
   width: 320px;
-  content: url("../img/img-5418-2.png"); /* Force correct image */
 }
 
 .iphone-16-homepage .overlap-group-container {
