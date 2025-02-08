@@ -122,12 +122,12 @@ html, body {
 }
 
 .desktop-chalets .rectangle-5 {
-  background-color: var(--dark-tan);
-  height: 342px;
-  left: 5px;
-  position: absolute;
-  top: 1713px;
-  width: 1368px;
+    background-color: var(--dark-tan);
+    height: 342px; /* Set correct height */
+    width: 100%; /* Make sure it spans the full width */
+    position: absolute; /* Keep it at the bottom */
+    bottom: 0;
+    left: 0;
 }
 
 .desktop-chalets .frame-1 {
