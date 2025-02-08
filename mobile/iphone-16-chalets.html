@@ -1,26 +1,69 @@
 <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <!--<meta name=description content="This site was generated with Anima. www.animaapp.com"/>-->
-    <!-- <link rel="shortcut icon" type=image/png href="https://animaproject.s3.amazonaws.com/home/favicon.png" /> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
-    <meta name="og:type" content="website" />
-    <meta name="twitter:card" content="photo" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    
     <link rel="stylesheet" type="text/css" href="../css/iphone-16-chalets.css">
     <link rel="stylesheet" type="text/css" href="../css/styleguide.css">
     <link rel="stylesheet" type="text/css" href="../css/globals.css">
+
+    <!-- Load Google Maps API -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfmLbJ-Xc-oaIuoFs1NuPRB6FygUWCyY0&callback=initMap"></script>
+    <script>
+      function initMap() {
+    if (typeof google === "undefined" || typeof google.maps === "undefined") {
+        console.error("Google Maps API not loaded yet.");
+        return;
+    }
+
+    console.log("Google Maps API is loaded. Initializing map...");
+
+    const map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: 45.9333, lng: 7.6333 },
+        zoom: 12,
+        mapId: "roadmap",
+    });
+
+    if (google.maps.marker && google.maps.marker.AdvancedMarkerElement) {
+        new google.maps.marker.AdvancedMarkerElement({
+            position: { lat: 45.9333, lng: 7.6333 },
+            map: map,
+            title: "Our Chalet",
+        });
+    } else {
+        console.error("AdvancedMarkerElement is not available. Falling back to basic marker.");
+        new google.maps.Marker({
+            position: { lat: 45.9333, lng: 7.6333 },
+            map: map,
+            title: "Our Chalet",
+        });
+    }
+}
+
+    </script>
+    
+    <style>
+      /* Ensure proper styling for map */
+      #map {
+        width: 100%;
+        max-width: 800px;
+        height: 450px;
+        margin: 20px auto;
+        border-radius: 16px;
+        z-index: 1000;
+      }
+    </style>
+  </head>
 
   </head>
   <body style="margin: 0; background: #ffffff">
     <input type="hidden" id="anPageName" name="page" value="iphone-16-chalets" />
     <div class="container-center-horizontal">
-      <div
-        class="iphone-16-chalets auto-animated screen"
+      <div class="iphone-16-chalets auto-animated screen"
         data-page="iphone-16-chalets"
-        data-screens="iphone-16-chalets,iphone-16-contact-us"
-      >
+        data-screens="iphone-16-chalets,iphone-16-contact-us">
         <div class="group-22-C61RwL">
           <div class="ussi-chalet_logo-1-VdQhAS"></div>
           <div class="authentic-alpine-living-VdQhAS">AUTHENTIC ALPINE LIVING</div>
@@ -42,6 +85,9 @@
         <div class="screenshot-2025-01-10-at-095542-1-C61RwL"></div>
         <div class="rectangle-7-C61RwL"></div>
         <div class="our-location-C61RwL">OUR LOCATION</div>
+        <div class="map-container">
+        <div id="map"></div>
+        </div>    
         <div class="x2024-your-chalet-a-C61RwL">
           <span class="span0-08yWxw">© </span
           ><span class="span1-08yWxw">2024 Your Chalet and Apartment Rentals All rights reserved</span>
@@ -79,9 +125,7 @@
             <div class="group-ahISmt"></div>
           </div>
         </div>
-        <div class="mask-group-VMr6Om">
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfmLbJ-Xc-oaIuoFs1NuPRB6FygUWCyY0&callback=initMap"
-        </div>
+        <div class="mask-group-VMr6Om"></div>
         <div class="contact-us-VMr6Om">CONTACT US</div>
         <div class="ussinchaletgmailcom-39-0123-456789-C61RwL">ussinchalet@gmail.com<br />+39 0123 456789</div>
         <div class="group-7-C61RwL">
