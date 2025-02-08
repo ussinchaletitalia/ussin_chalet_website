@@ -321,7 +321,7 @@
 }
 
 .iphone-16-chalets .rectangle-7-C61RwL {
-  --z-index: 19;
+  --z-index: 10;
   background-color: #f4ebe8;
   height: 626px;
   left: 0px;
@@ -367,6 +367,31 @@
   text-align: center;
   top: 1171px;
   width: 624px;
+}
+
+#map {
+  position: relative !important;  /* Ensure it stays inside the section */
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  min-height: 450px;
+  border-radius: 12px;
+  background: #e0e0e0; /* Temporary background to check visibility */
+  z-index: 1001 !important; /* Bring it above other elements */
+  display: block !important;
+  visibility: visible !important;
+}
+
+.map-container {
+  opacity: 10;
+  position: relative !important;
+  z-index: 1000 !important;
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1000px; /* Adjust value as needed */
 }
 
 .iphone-16-chalets .rectangle-5-C61RwL {
@@ -590,7 +615,7 @@
 .iphone-16-contact-us .ussi-chalet_logo-1-VdQhAS {
   --z-index: 0;
   background-color: transparent;
-  background-image: url(../img/ussi-chalet-logo-1.png);
+  background-image: url("./images/ussi-chalet-logo-1.png");
   background-size: 100% 100%;
   height: 89px;
   left: 83px;
@@ -711,6 +736,7 @@
   width: 243px;
 }
 
+
 .iphone-16-contact-us .contact-us-C61RwL {
   --z-index: 8;
   background-color: transparent;
@@ -794,7 +820,7 @@
 }
 
 .iphone-16-contact-us .rectangle-7-C61RwL {
-  --z-index: 13;
+  --z-index: auto;
   background-color: #671212;
   box-shadow: 0px 4px 4px #0000004c , 0px 8px 12px 6px #00000026;
   height: 84px;
