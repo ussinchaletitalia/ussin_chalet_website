@@ -6,9 +6,9 @@
   align-items: flex-start;
   background-color: var(--white);
   display: flex;
-  height: auto; /* Changed from fixed height to auto to adapt */
+  height: auto; /* Allows content to determine height */
   overflow: visible;
-  width: 1280px;
+  width: 100%; /* Changed from fixed width to full width */
 }
 
 .desktop-chalets .overlap-group1 {
