@@ -369,29 +369,30 @@
   width: 624px;
 }
 
-#map {
-  position: relative !important;  /* Ensure it stays inside the section */
-  width: 100%;
-  max-width: 800px;
-  height: 450px;
-  min-height: 450px;
-  border-radius: 12px;
-  background: #e0e0e0; /* Temporary background to check visibility */
-  z-index: 1001 !important; /* Bring it above other elements */
-  display: block !important;
-  visibility: visible !important;
-}
-
 .map-container {
-  opacity: 10;
-  position: relative !important;
-  z-index: 1000 !important;
+  position: relative;
+  z-index: 1000;
   width: 100%;
-  max-width: 800px;
-  height: 450px;
+  max-width: 450px;
+  height: 350px; /* Adjust if needed */
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1000px; /* Adjust value as needed */
+  margin-top: 1250px; /* Moves the map DOWN */
+  padding-top: 0; /* Removes unnecessary padding */
+}
+
+#map {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  height: 350px;
+  min-height: 350px;
+  border-radius: 2px;
+  background: #e0e0e0;
+  z-index: 1001;
+  display: block;
+  visibility: visible;
 }
 
 .iphone-16-chalets .rectangle-5-C61RwL {
@@ -1069,7 +1070,7 @@
 }
 
 .iphone-16-contact-us .group-31-C61RwL {
-  --z-index: 19;
+  --z-index: 1;
   background-color: transparent;
   cursor: pointer;
   height: 16px;
