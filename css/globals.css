@@ -10,7 +10,6 @@
   src: url("../fonts/KannadaMN-01.ttf") format("truetype");
 }
 
-
 .screen a {
   display: contents;
   text-decoration: none;
@@ -31,13 +30,13 @@
 
 .auto-animated div {
   --z-index: -1;
-  opacity: 0;
+  opacity: 1;
   position: absolute;
 }
 
 .auto-animated input {
   --z-index: -1;
-  opacity: 0;
+  opacity: 1;
   position: absolute;
 }
 
