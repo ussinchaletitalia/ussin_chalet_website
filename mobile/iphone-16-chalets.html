@@ -21,21 +21,21 @@
     console.log("Google Maps API is loaded. Initializing map...");
 
     const map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 45.9333, lng: 7.6333 },
+        center: { lat: 45.8530410363233, lng: 7.604977028835924 },
         zoom: 12,
         mapId: "roadmap",
     });
 
     if (google.maps.marker && google.maps.marker.AdvancedMarkerElement) {
         new google.maps.marker.AdvancedMarkerElement({
-            position: { lat: 45.9333, lng: 7.6333 },
+            position: { lat: 45.8530410363233, lng: 7.604977028835924 },
             map: map,
             title: "Our Chalet",
         });
     } else {
         console.error("AdvancedMarkerElement is not available. Falling back to basic marker.");
         new google.maps.Marker({
-            position: { lat: 45.9333, lng: 7.6333 },
+            position: { lat: 45.8530410363233, lng: 7.604977028835924 },
             map: map,
             title: "Our Chalet",
         });
@@ -73,6 +73,37 @@
         <div class="group-26-C61RwL" onclick="" onmouseover=""></div>
         <div class="rectangle-4-C61RwL"></div>
         <div class="our-chalets-C61RwL">OUR CHALETS</div>
+        <div class="airbnb-listings">
+          <!-- Airbnb Listing 1 -->
+          <div class="airbnb-embed-frame"
+               data-id="979009583861992990"
+               data-view="home"
+               data-hide-price="true"
+               style="width: 100%; max-width: 450px; height: 300px; margin: 20px auto;">
+            <a href="https://www.airbnb.it/rooms/979009583861992990?guests=1&adults=1&s=66&source=embed_widget">
+              Visto su Airbnb
+            </a>
+            <a href="https://www.airbnb.it/rooms/979009583861992990?guests=1&adults=1&s=66&source=embed_widget"
+               rel="nofollow">
+              Chalet · Valtournenche · ★4.67 · 1 camera da letto · 1 letto · 1 bagno
+            </a>
+          </div>
+        
+          <!-- Airbnb Listing 2 -->
+          <div class="airbnb-embed-frame"
+               data-id="1189233581383934270"
+               data-view="home"
+               data-hide-price="true"
+               style="width: 100%; max-width: 450px; height: 300px; margin: 20px auto;">
+            <a href="https://www.airbnb.it/rooms/1189233581383934270?guests=1&adults=1&s=66&source=embed_widget">
+              Visto su Airbnb
+            </a>
+            <a href="https://www.airbnb.it/rooms/1189233581383934270?guests=1&adults=1&s=66&source=embed_widget"
+               rel="nofollow">
+              Chalet · Valtournenche · ★4.75 · 2 camere da letto · 2 letti · 2 bagni
+            </a>
+          </div>
+        </div>        
         <div class="rectangle-6-C61RwL"></div>
         <div class="our-chalets-VMr6Om">OUR CHALETS</div>
         <div class="contact-us-C61RwL" onclick="" onmouseover="">CONTACT US</div>
@@ -112,8 +143,6 @@
           We offer apartments located in the stunning Italian Alps near Cervinia. <br />Perfect for skiing, hiking, or
           relaxing in the beautiful mountain landscape.
         </div>
-        <div class="screenshot-2025-01-10-at-095533-1-C61RwL"></div>
-        <div class="screenshot-2025-01-10-at-095542-2-C61RwL"></div>
         <div class="our-chalets-mzXdH9">OUR CHALETS</div>
         <div class="our-location-VMr6Om">OUR LOCATION</div>
         <div class="rectangle-5-C61RwL"></div>
@@ -133,17 +162,47 @@
           <div class="group-SO40Oe"></div>
         </div>
         <div class="group-30-C61RwL">
-          <div class="rectangle-8-xxkKyh"></div>
-          <div class="your-name-xxkKyh">Your Name:</div>
-          <div class="rectangle-9-xxkKyh"></div>
-          <div class="rectangle-12-xxkKyh"></div>
-          <div class="your-email-xxkKyh">Your Email:</div>
-          <div class="your-message-xxkKyh">Your Message:</div>
-          <div class="rectangle-11-xxkKyh"></div>
-          <div class="group-22-xxkKyh"></div>
-        </div>
+          <div class="group-30-C61RwL">
+            <form action="https://formspree.io/f/xkggklva" method="POST">
+            
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" class="input-name" required>
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="input-email" required>
+            
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" class="input-message" required></textarea>
+            
+                <button type="submit">SEND MESSAGE</button>
+            </form>
+        </div>               
+          </form>
+          </form>                
+          </div>          
       </div>
     </div>
+    <script>
+
+      document.addEventListener("DOMContentLoaded", function() {
+        var airbnbScript = document.createElement("script");
+        airbnbScript.src = "https://www.airbnb.it/embeddable/airbnb_jssdk";
+        airbnbScript.async = true;
+        document.body.appendChild(airbnbScript);
+      });
+
+      document.addEventListener("DOMContentLoaded", function() {
+  setTimeout(() => {
+    document.querySelectorAll('.airbnb-embed-frame iframe').forEach(iframe => {
+      iframe.style.transform = "none";
+      iframe.style.zoom = "1";
+      iframe.style.objectFit = "contain";
+    });
+  }, 3000); // Reapply styles after 3 seconds
+});
+
+    </script>
+
     <script>
       "use strict";
 
@@ -1373,6 +1432,36 @@
         setTimeout(init_timeline_components, 0);
         setTimeout(init_auto_animate, 0);
       })();
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function fixAirbnbFrames() {
+          document.querySelectorAll('.airbnb-embed-frame iframe').forEach(iframe => {
+            iframe.style.width = "100%";
+            iframe.style.height = "300px";
+            iframe.style.objectFit = "contain";
+            iframe.style.overflow = "hidden";
+            iframe.style.transform = "none";
+            iframe.style.zoom = "1";
+          });
+        }
+    
+        // Run fix initially after Airbnb loads
+        setTimeout(fixAirbnbFrames, 3000);
+    
+        // Monitor changes and reapply styles if Airbnb attempts to override them
+        const observer = new MutationObserver(() => fixAirbnbFrames());
+        document.querySelectorAll('.airbnb-embed-frame iframe').forEach(iframe => {
+          observer.observe(iframe, { attributes: true, childList: true, subtree: true });
+        });
+    
+        // Reapply styles when the tab regains focus (prevents Airbnb overriding on tab switch)
+        document.addEventListener("visibilitychange", function () {
+          if (!document.hidden) {
+            setTimeout(fixAirbnbFrames, 500);
+          }
+        });
+      });
     </script>
   </body>
 </html>
