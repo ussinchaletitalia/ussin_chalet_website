@@ -21,6 +21,56 @@
   width: 444px;
 }
 
+.airbnb-listings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 450px;
+  margin: 100px auto 0;
+  z-index: 9999;
+  position: relative;
+  padding-top: 60px;
+  min-height: 900px; /* Forces space for both */
+  position: absolute;
+  left: 62.5%; /* Moves the container to the center */
+  transform: translateX(-50%); /* Adjusts position to be perfectly centered */
+}
+
+.airbnb-embed-frame {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  height: 300px !important; /* Force a fixed height */
+  min-height: 300px !important; /* Prevent Airbnb resizing */
+  display: block !important; /* Ensures visibility */
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+  transition: none !important; /* Prevents jumping */
+}
+
+.airbnb-embed-frame:first-child {
+  margin-bottom: 80px;
+  transform: none !important; /* Remove unwanted shifting */
+}
+
+.airbnb-embed-frame:nth-child(2) {
+  margin-top: 350px !important; /* Moves second listing */
+  transform: none !important; /* Remove unwanted shifting */
+}
+
+.airbnb-embed-frame iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 300px !important; /* Prevents Airbnb from overriding */
+  max-height: 300px !important;
+  border: none;
+  object-fit: contain;
+  overflow: hidden;
+}
+
 .iphone-16-chalets .ussi-chalet_logo-1-VdQhAS {
   --z-index: 0;
   background-color: transparent;
@@ -393,6 +443,7 @@
   z-index: 1001;
   display: block;
   visibility: visible;
+  clip-path: inset(0px 0px 50px 0px); /* Crops 50px from bottom, adjust as needed */
 }
 
 .iphone-16-chalets .rectangle-5-C61RwL {
@@ -1118,4 +1169,161 @@
   position: absolute;
   top: 13px;
   width: 24px;
+}
+
+.iphone-16-contact-us .airbnb-listings {
+  display: none;
+}
+
+.contact-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto; /* Center horizontally */
+  padding-top: 0px;
+  position: absolute;
+  left: 10%;
+  transform: translateX(-50%);
+}
+
+form label,
+form input,
+form textarea,
+form button {
+  margin-left: -20px; /* Move only form elements left */
+}
+
+.contact-form-container {
+  position: relative;
+  left: -20px; /* Adjust as needed */
+}
+
+.group-30-C61RwL {
+  position: relative;
+  left: -20px; /* Adjust as needed */
+}
+
+.group-30-C61RwL, .rectangle-4-C61RwL {
+  position: relative;
+  left: -20px; /* Adjust until aligned */
+}
+.group-30-C61RwL {
+    position: relative;
+    left: -20px; /* Adjust this to move it left */
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  background: #f6efec;
+  padding-top: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* Ensure proper positioning */
+  top: -350px; /* Move it up */
+}
+
+form label {
+  font-weight: bold;
+  color: #4e1d1d;
+  margin-top: 35px;
+  font-size: 16px;
+  display: block;
+  margin-bottom: -2px; /* Reduce space between label and input */
+}
+
+form input,
+form textarea {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #4e1d1d;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  margin-top: 100px;
+  visibility: visible; /* Ensure it is not hidden */
+  opacity: 1; /* Ensure it is not transparent */
+}
+
+.input-name {
+  position: relative;
+  top: -35px; /* Adjust this value to move it up or down */
+}
+
+.input-subject {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 2px solid #4e1d1d;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 5px;
+  display: block;
+  margin-top: 60px; /* Move it up */
+}
+
+.input-email {
+  position: relative;
+  top: 60px; /* Move it down */
+}
+
+label[for="name"] {
+  position: relative;
+  top: -2px; /* Adjust this value to move it up */
+}
+
+label[for="email"] {
+  position: relative;
+  top: 40px; /* Adjust this value to move it up */
+}
+
+label[for="message"] {
+  position: relative;
+  top: 80px; /* Adjust this value to move it up */
+}
+
+.input-message {
+  font-size: 5px; /* Reduce the font size */
+}
+
+/* Controls the size of the Message box separately */
+.input-message {
+  width: 100%;
+  height: 100px; /* Adjust height for message box */
+  padding: 25px;
+  border: 2px solid #4e1d1d;
+  border-radius: 2.5px;
+  font-size: 10px;
+  resize: none; /* Prevents manual resizing */
+  margin-top: 80px; /* Move it up */
+}
+
+form label {
+  font-weight: bold;
+  color: #4e1d1d;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+form button {
+  background: #4e1d1d;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #3b1414;
 }
