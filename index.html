@@ -7,15 +7,16 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const isMobile = /iPhone|iPad|Android|iPod/i.test(navigator.userAgent);
+            
             if (isMobile) {
-                window.location.href = "mobile/index.html";  // Redirects mobile users
+                window.location.href = "mobile/index.html"; // Redirect mobile users
             } else {
-                window.location.href = "desktop-homepage.html";  // Redirects desktop users
+                window.location.href = "desktop-homepage.html"; // Redirect desktop users
             }
         });
     </script>
 </head>
 <body>
-    <p>If you're not redirected, <a href="desktop-homepage.html">click here for desktop</a> or <a href="mobile/index.html">click here for mobile</a>.</p>
+    <p>Redirecting...</p>
 </body>
 </html>
