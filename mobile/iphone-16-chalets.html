@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="../css/iphone-16-chalets.css">
     <link rel="stylesheet" type="text/css" href="../css/styleguide.css">
     <link rel="stylesheet" type="text/css" href="../css/globals.css">
@@ -12,6 +10,7 @@
     <!-- Load Google Maps API -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfmLbJ-Xc-oaIuoFs1NuPRB6FygUWCyY0&callback=initMap"></script>
     <script>
+      
       function initMap() {
     if (typeof google === "undefined" || typeof google.maps === "undefined") {
         console.error("Google Maps API not loaded yet.");
@@ -61,6 +60,17 @@
   <body style="margin: 0; background: #ffffff">
     <input type="hidden" id="anPageName" name="page" value="iphone-16-chalets" />
     <div class="container-center-horizontal">
+
+      <div class="menu-container">
+        <button class="close-menu">✕</button>
+        <ul>
+          <ul>
+            <li><a href="iphone-16-chalets.html#iphone-16-chalets">Our Chalets</a></li>
+            <li><a href="file:///Users/barnabaswhiting/Documents/ussin_chalet_website-main/mobile/iphone-16-chalets.html#iphone-16-contact-us">Contact Us</a></li>
+        </ul>        
+        </ul>
+    </div>
+
       <div class="iphone-16-chalets auto-animated screen"
         data-page="iphone-16-chalets"
         data-screens="iphone-16-chalets,iphone-16-contact-us">
@@ -124,10 +134,7 @@
           ><span class="span1-08yWxw">2024 Your Chalet and Apartment Rentals All rights reserved</span>
         </div>
         <div
-          class="group-31-C61RwL"
-          onclick="Lib.autoanim_redirect('iphone-16-contact-us,iphone-16-menu,,,', event)"
-          onmouseover=""
-        >
+        <div class="group-31-C61RwL">
           <div class="line-4-I5cRPp"></div>
           <div class="line-5-I5cRPp"></div>
           <div class="line-6-I5cRPp"></div>
@@ -1463,5 +1470,32 @@
         });
       });
     </script>
+    <script>
+     document.addEventListener("DOMContentLoaded", function () {
+    const menu = document.querySelector(".menu-container");
+    const menuButton = document.querySelector(".group-31-C61RwL"); // Hamburger menu button
+    const closeButton = document.querySelector(".close-menu");
+
+    if (!menu || !menuButton || !closeButton) {
+        console.error("Menu elements not found.");
+        return;
+    }
+
+    menuButton.addEventListener("click", function (event) {
+        event.stopPropagation();
+        menu.style.display = "flex"; // Show the menu
+    });
+
+    closeButton.addEventListener("click", function () {
+        menu.style.display = "none"; // Hide the menu
+    });
+
+    document.addEventListener("click", function (event) {
+        if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
+            menu.style.display = "none"; // Close menu when clicking outside
+        }
+    });
+});
+    </script>    
   </body>
 </html>
