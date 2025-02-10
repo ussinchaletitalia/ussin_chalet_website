@@ -1,4 +1,13 @@
-/* screen - iphone-16-homepage */
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.iphone-16-homepage {
+  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+}
 
 .iphone-16-homepage {
   background-image: url("../img/img-5418-2.png");
