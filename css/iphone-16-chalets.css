@@ -1175,6 +1175,18 @@
   display: none;
 }
 
+.airbnb-embed-frame iframe {
+  width: 100% !important;
+  height: 300px !important; /* Adjust to match the desired size */
+  min-height: 300px !important;
+  max-height: 300px !important;
+  object-fit: cover;
+  border: none;
+  overflow: hidden;
+  transform: none !important;
+  zoom: 1 !important;
+}
+
 .contact-form-container {
   display: flex;
   justify-content: center;
@@ -1327,3 +1339,92 @@ form button {
 form button:hover {
   background: #3b1414;
 }
+
+.menu-container {
+  position: fixed;
+  width: 100%;
+  max-width: 380px; /* Keeps it compact */
+  height: 300px; /* Adjust height to match the reference */
+  background: #5B1E14; /* Dark brown */
+  color: white;
+  display: none;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
+  align-items: flex-start; /* Aligns text to the left */
+  padding: 40px 50px; /* Adjust spacing */
+  z-index: 99999;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Close button */
+.menu-container .close-menu {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 26px;
+  color: #5B1E14;
+  cursor: pointer;
+}
+
+/* Menu items */
+.menu-container a {
+  color: white;
+  font-size: 35px; /* Match the larger font size */
+  font-weight: bold;
+  text-decoration: none;
+  margin: 15px 0; /* Even spacing */
+  display: block;
+  text-align: left; /* Keep left-aligned */
+}
+
+/* Remove "Our Location" */
+.menu-container a[href*="location"] {
+  display: none;
+}
+
+/* Hover effect */
+.menu-container a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form {
+  background: #F1E8E4;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #601C13;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background: white;
+  color: #601C13;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+footer {
+  background: #601C13;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
