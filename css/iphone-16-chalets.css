@@ -64,26 +64,6 @@
   visibility: visible !important;
 }
 
-.airbnb-embed-frame:first-child {
-  margin-bottom: 80px;
-  transform: none !important; /* Remove unwanted shifting */
-}
-
-.airbnb-embed-frame:nth-child(2) {
-  margin-top: 350px !important; /* Moves second listing */
-  transform: none !important; /* Remove unwanted shifting */
-}
-
-.airbnb-embed-frame iframe {
-  width: 100%;
-  height: 100%;
-  min-height: 300px !important; /* Prevents Airbnb from overriding */
-  max-height: 300px !important;
-  border: none;
-  object-fit: contain;
-  overflow: hidden;
-}
-
 .iphone-16-chalets .ussi-chalet_logo-1-VdQhAS {
   --z-index: 0;
   background-color: transparent;
