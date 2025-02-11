@@ -40,8 +40,6 @@
   min-height: 300px !important;
   max-height: 300px !important;
   border: none;
-  transform: scale(0.8); /* Adjust scale as needed */
-  transform-origin: 0 0;
   overflow: hidden;
   display: block;
   visibility: visible !important;
