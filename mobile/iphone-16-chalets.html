@@ -183,6 +183,25 @@
     </div>
     <script>
 
+      document.addEventListener("DOMContentLoaded", function() {
+        var airbnbScript = document.createElement("script");
+        airbnbScript.src = "https://www.airbnb.it/embeddable/airbnb_jssdk";
+        airbnbScript.async = true;
+        document.body.appendChild(airbnbScript);
+      });
+
+      document.addEventListener("DOMContentLoaded", function() {
+  setTimeout(() => {
+    document.querySelectorAll('.airbnb-embed-frame iframe').forEach(iframe => {
+      iframe.style.transform = "none";
+      iframe.style.zoom = "1";
+      iframe.style.objectFit = "contain";
+    });
+  }, 3000); // Reapply styles after 3 seconds
+});
+
+    </script>
+
     <script>
       "use strict";
 
