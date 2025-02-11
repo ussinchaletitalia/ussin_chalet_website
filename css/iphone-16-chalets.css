@@ -44,11 +44,24 @@
   max-width: 450px;
   height: 300px !important; /* Force a fixed height */
   min-height: 300px !important; /* Prevent Airbnb resizing */
-  display: block !important; /* Ensures visibility */
+  display: flex !important; /* Ensure it's displayed properly */
   justify-content: center;
   align-items: center;
   margin: 40px auto;
   transition: none !important; /* Prevents jumping */
+}
+
+.airbnb-embed-frame iframe {
+  width: 100% !important;
+  height: 100% !important; /* Make it fill its parent */
+  min-height: 300px !important; /* Prevent Airbnb overriding */
+  max-height: 300px !important;
+  border: none;
+  object-fit: contain;
+  overflow: hidden;
+  display: block;
+  visibility: visible !important; /* Ensure it's visible */
+  opacity: 1 !important;
 }
 
 .airbnb-embed-frame:first-child {
