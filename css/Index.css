@@ -101,7 +101,10 @@ html, body {
 
 /* Move Our Chalets button */
 .group-13 {
-  margin-top: -5px;
+  margin-top: 0;
+  width: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Move Contact Us button independently */
