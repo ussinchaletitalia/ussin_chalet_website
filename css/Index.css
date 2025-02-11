@@ -99,6 +99,12 @@ html, body {
   margin-bottom: -20px; /* Move it up */
 }
 
+.group-13, .group-14 {
+  width: 200px; /* Ensure both are the same */
+  height: 80px;
+  object-fit: contain; /* Ensures proper scaling */
+}
+
 /* Move Our Chalets button */
 .group-13 {
   margin-top: 0;
