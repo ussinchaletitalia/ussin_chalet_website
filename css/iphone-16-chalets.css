@@ -38,19 +38,6 @@
   transform: translateX(-50%); /* Adjusts position to be perfectly centered */
 }
 
-.airbnb-embed-frame {
-    position: relative;
-    width: 100% !important;
-    max-width: 450px;
-    height: 300px !important;
-    overflow: hidden; /* Prevent scrolling inside */
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    margin: 20px auto;
-    pointer-events: none; /* Prevent dragging */
-}
-
 .airbnb-embed-frame iframe {
     width: 100% !important;
     height: 100% !important;
@@ -58,11 +45,24 @@
     max-height: 300px !important;
     border: none;
     overflow: hidden;
-    transform: scale(1) !important; /* Ensures no zooming */
-    transform-origin: center !important;
-    user-select: none; /* Prevents dragging */
-    pointer-events: none; /* Disables interaction inside */
-}}
+    transform: scale(0.8) !important; /* Forces the Airbnb content to "zoom out" */
+    transform-origin: top left !important;
+    user-select: none; /* Prevents accidental dragging */
+    pointer-events: auto; /* Keeps interactions working */
+}
+
+.airbnb-embed-frame {
+    position: relative;
+    width: 100% !important;
+    max-width: 450px;
+    height: 300px !important;
+    overflow: hidden;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin: 20px auto;
+    pointer-events: none; /* Prevents dragging */
+}
 
 .airbnb-embed-frame:first-child {
   margin-bottom: 80px;
