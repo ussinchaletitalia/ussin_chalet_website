@@ -21,30 +21,6 @@
   width: 444px;
 }
 
-.airbnb-embed-frame {
-  position: relative;
-  width: 100px;
-  max-width: 450px;
-  height: 300px !important;
-  min-height: 300px !important;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  margin: 40px auto;
-  overflow: hidden; /* Prevents scrolling */
-}
-
-.airbnb-embed-frame iframe {
-  width: 100px !important;
-  height: 300px !important;
-  min-height: 300px !important;
-  max-height: 300px !important;
-  border: none;
-  overflow: hidden;
-  display: block;
-  visibility: visible !important;
-}
-
 .iphone-16-chalets .ussi-chalet_logo-1-VdQhAS {
   --z-index: 0;
   background-color: transparent;
