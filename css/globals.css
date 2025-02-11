@@ -80,3 +80,7 @@
   top: 0;
   width: 277px;
 }
+
+.group-13, .group-14 {
+  box-sizing: content-box !important;
+}
