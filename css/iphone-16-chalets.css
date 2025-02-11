@@ -1,23 +1,23 @@
 
 .airbnb-section {
-  width: 100%;
-  max-width: calc(450px * var(--airbnb-scale)); /* Scales down proportionally */
-  margin: calc(100px * var(--airbnb-scale)) auto;
-  text-align: center;
+    width: 100%;
+    max-width: 450px;
+    margin: 20px auto;
+    text-align: center;
 }
 
 .airbnb-title {
-  font-size: calc(18px * var(--airbnb-scale)); /* Scales text size */
-  font-weight: bold;
-  margin-bottom: calc(10px * var(--airbnb-scale));
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .airbnb-embed-frame {
-  width: calc(450px * var(--airbnb-scale)); /* Scales width */
-  height: calc(300px * var(--airbnb-scale)); /* Scales height proportionally */
-  margin: auto;
-  display: block;
-  z-index: 999;
+    width: 100%;
+    max-width: 450px;
+    height: 300px;
+    margin: auto;
+    display: block;
 }
 
 .iphone-16-chalets {
