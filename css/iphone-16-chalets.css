@@ -21,23 +21,6 @@
   width: 444px;
 }
 
-.airbnb-listings {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  max-width: 450px;
-  margin: 100px auto 0;
-  z-index: 9999;
-  position: relative;
-  padding-top: 60px;
-  min-height: 900px; /* Forces space for both */
-  position: absolute;
-  left: 62.5%; /* Moves the container to the center */
-  transform: translateX(-50%); /* Adjusts position to be perfectly centered */
-}
-
 .airbnb-embed-frame {
   position: relative;
   width: 100%;
