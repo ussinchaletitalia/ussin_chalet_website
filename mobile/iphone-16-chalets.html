@@ -181,9 +181,9 @@
           </div>          
       </div>
     </div>
+  
     <script>
-
-    <script>
+    
       "use strict";
 
       function _toConsumableArray(arr) {
@@ -1414,32 +1414,7 @@
       })();
     </script>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        function fixAirbnbFrames() {
-          document.querySelectorAll('.airbnb-embed-frame iframe').forEach(iframe => {
-            iframe.style.width = "100%";
-            iframe.style.height = "300px";
-            iframe.style.objectFit = "contain";
-            iframe.style.overflow = "hidden";
-            iframe.style.transform = "none";
-            iframe.style.zoom = "1";
-          });
-        }
-    
-        // Run fix initially after Airbnb loads
-        setTimeout(fixAirbnbFrames, 3000);
-    
-        // Monitor changes and reapply styles if Airbnb attempts to override them
-        const observer = new MutationObserver(() => fixAirbnbFrames());
-        document.querySelectorAll('.airbnb-embed-frame iframe').forEach(iframe => {
-          observer.observe(iframe, { attributes: true, childList: true, subtree: true });
-        });
-    
-        // Reapply styles when the tab regains focus (prevents Airbnb overriding on tab switch)
-        document.addEventListener("visibilitychange", function () {
-          if (!document.hidden) {
-            setTimeout(fixAirbnbFrames, 500);
-          }
+     
         });
       });
     </script>
