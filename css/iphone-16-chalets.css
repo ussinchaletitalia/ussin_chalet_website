@@ -23,7 +23,7 @@
 
 .airbnb-embed-frame {
   position: relative;
-  width: 100%;
+  width: 100px;
   max-width: 450px;
   height: 300px !important;
   min-height: 300px !important;
@@ -35,8 +35,8 @@
 }
 
 .airbnb-embed-frame iframe {
-  width: 100% !important;
-  height: 100% !important;
+  width: 100px !important;
+  height: 300px !important;
   min-height: 300px !important;
   max-height: 300px !important;
   border: none;
