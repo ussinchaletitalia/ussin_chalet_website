@@ -1,5 +1,30 @@
 /* screen - iphone-16-chalets */
 
+:root {
+  --airbnb-scale: 1; /* Change this to scale everything (1 = default, 0.8 = 80%, etc.) */
+}
+
+.airbnb-section {
+  width: 100%;
+  max-width: calc(450px * var(--airbnb-scale)); /* Scales down proportionally */
+  margin: calc(100px * var(--airbnb-scale)) auto;
+  text-align: center;
+}
+
+.airbnb-title {
+  font-size: calc(18px * var(--airbnb-scale)); /* Scales text size */
+  font-weight: bold;
+  margin-bottom: calc(10px * var(--airbnb-scale));
+}
+
+.airbnb-embed-frame {
+  width: calc(450px * var(--airbnb-scale)); /* Scales width */
+  height: calc(300px * var(--airbnb-scale)); /* Scales height proportionally */
+  margin: auto;
+  display: block;
+  z-index: 999;
+}
+
 .iphone-16-chalets {
   background-color: #ffffff;
   height: 1912px;
@@ -19,30 +44,6 @@
   position: absolute;
   top: 364px;
   width: 444px;
-}
-
-.airbnb-embed-frame {
-  position: relative;
-  width: 100px;
-  max-width: 450px;
-  height: 300px !important;
-  min-height: 300px !important;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  margin: 40px auto;
-  overflow: hidden; /* Prevents scrolling */
-}
-
-.airbnb-embed-frame iframe {
-  width: 100px !important;
-  height: 300px !important;
-  min-height: 300px !important;
-  max-height: 300px !important;
-  border: none;
-  overflow: hidden;
-  display: block;
-  visibility: visible !important;
 }
 
 .iphone-16-chalets .ussi-chalet_logo-1-VdQhAS {
