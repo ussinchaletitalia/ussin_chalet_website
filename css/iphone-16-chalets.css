@@ -1149,18 +1149,6 @@
   display: none;
 }
 
-.airbnb-embed-frame iframe {
-  width: 100% !important;
-  height: 300px !important; /* Adjust to match the desired size */
-  min-height: 300px !important;
-  max-height: 300px !important;
-  object-fit: cover;
-  border: none;
-  overflow: hidden;
-  transform: none !important;
-  zoom: 1 !important;
-}
-
 .contact-form-container {
   display: flex;
   justify-content: center;
