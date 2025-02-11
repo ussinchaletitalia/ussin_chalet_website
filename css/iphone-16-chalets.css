@@ -17,10 +17,6 @@
     height: 300px;
     margin: auto;
     display: block;
-    position: relative;
-    visibility: visible !important;
-    opacity: 1 !important;
-    overflow: hidden;
 }
 
 .iphone-16-chalets {
