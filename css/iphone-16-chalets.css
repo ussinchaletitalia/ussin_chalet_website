@@ -1364,5 +1364,21 @@ footer {
   text-align: center;
   margin-top: 20px;
 }
+.airbnb-embed-frame {
+  width: 100%;
+  max-width: 450px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.airbnb-embed-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
+}
 
 
