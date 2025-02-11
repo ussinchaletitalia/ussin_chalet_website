@@ -88,3 +88,15 @@
 .group-13, .group-14 {
   display: block !important;
 }
+
+.group-13, .group-14 {
+  object-fit: contain !important;
+}
+
+.group-13, .group-14 {
+  width: 200px !important;  /* Force same size */
+  height: 80px !important;
+  object-fit: contain !important; /* Prevent unwanted cropping */
+  display: block !important; /* Ensure block behavior */
+  box-sizing: content-box !important; /* Prevent width issues */
+}
