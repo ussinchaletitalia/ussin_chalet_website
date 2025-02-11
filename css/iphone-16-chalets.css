@@ -1,7 +1,11 @@
-/* screen - iphone-16-chalets */
+/* Adjusting Chalet 1 Position */
+.airbnb-embed-frame[data-id="979009583861992990"] {
+    margin-top: 200px; /* Move this one further down */
+}
 
-:root {
-  --airbnb-scale: 1; /* Change this to scale everything (1 = default, 0.8 = 80%, etc.) */
+/* Adjusting Chalet 2 Position */
+.airbnb-embed-frame[data-id="1189233581383934270"] {
+    margin-top: 400px; /* Move this one even further down */
 }
 
 .airbnb-section {
