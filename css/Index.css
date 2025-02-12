@@ -20,7 +20,7 @@ html, body {
 /* Fix logo placement */
 .logo-container {
     position: absolute;
-    top: 10%; /* Moves it further up */
+    top: 8%; /* Adjusted to move it further up */
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
@@ -29,32 +29,27 @@ html, body {
 }
 
 .ussi-chalet-logo {
-    max-width: 200px; /* Adjust size */
+    max-width: 180px; /* Adjusted size */
     height: auto;
     display: block;
     margin: 0 auto;
     z-index: 1000;
 }
 
-/* Push Instagram button down */
+/* ✅ Push Instagram button down */
 .overlap-group2 {
-    margin-top: 80px; /* Moves Instagram button lower */
-}
-
-/* ✅ Fix Instagram Button Position */
-.overlap-group2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 80px; /* Moves Instagram button below logo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px; /* Moves Instagram button lower */
 }
 
 /* ✅ Ensure Instagram button is below the logo */
 .group-7 {
   width: 50px;
   height: auto;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 /* ✅ Fix Positioning of "Authentic Alpine Living" */
@@ -63,7 +58,7 @@ html, body {
   font-weight: bold;
   color: white;
   text-align: center;
-  margin-top: 90px; /* Pushes it below the logo */
+  margin-top: 50px; /* Pushes it below the logo */
 }
 
 /* ✅ Fix Navigation Buttons */
@@ -72,7 +67,7 @@ html, body {
   display: block;
   width: 200px;
   height: 80px;
-  margin: 10px auto;
+  margin: 15px auto;
   object-fit: contain;
   cursor: pointer;
 }
