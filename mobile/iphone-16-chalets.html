@@ -115,11 +115,7 @@
         <div class="rectangle-6-C61RwL"></div>
         <div class="our-chalets-VMr6Om">OUR CHALETS</div>
         <div class="contact-us-C61RwL" onclick="" onmouseover="">CONTACT US</div>
-        <div
-          class="ussi-chalet_logo-white-1-C61RwL"
-          onclick="Lib.autoanim_redirect('iphone-16-chalets,iphone-16-homepage,,,;iphone-16-contact-us,iphone-16-homepage,,,', event)"
-          onmouseover=""
-        ></div>
+        <div class="ussi-chalet_logo-white-1-C61RwL" onclick="handleChaletLogoClick()" onmouseover=""></div>
         <div class="group-27-C61RwL" onclick="" onmouseover=""></div>
         <div class="screenshot-2025-01-10-at-095542-1-C61RwL"></div>
         <div class="rectangle-7-C61RwL"></div>
@@ -1494,6 +1490,19 @@
         }
     });
 });
-    </script>    
+    </script>
+    <script>
+    function handleChaletLogoClick() {
+        const currentPage = window.location.pathname.split("/").pop(); // Get the current file name
+
+        if (currentPage === "iphone-16-chalets.html") {
+            // Refresh the page if already on chalets page
+            window.location.reload();
+        } else {
+            // Redirect to chalets page if on another page
+            window.location.href = "iphone-16-chalets.html";
+        }
+    }
+</script>
   </body>
 </html>
