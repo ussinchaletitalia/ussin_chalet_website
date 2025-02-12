@@ -1160,7 +1160,7 @@ form label,
 form input,
 form textarea,
 form button {
-  margin-left: -20px; /* Move only form elements left */
+  margin-left: -0px; /* Move only form elements left */
 }
 
 .contact-form-container {
