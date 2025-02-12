@@ -31,6 +31,16 @@ html, body {
   display: block;
 }
 
+.ussi-chalet-logo {
+    display: block !important;
+    max-width: 200px; /* Adjust if needed */
+    height: auto;
+    margin: 0 auto; /* Center it */
+    z-index: 9999; /* Make sure it's above everything */
+    position: relative; /* Prevents it from being hidden */
+    opacity: 1 !important;
+}
+
 /* Ensure Instagram icon is properly placed */
 .group-7 {
   position: relative;
