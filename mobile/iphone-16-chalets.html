@@ -1493,16 +1493,19 @@
     </script>
     <script>
     function handleChaletLogoClick() {
-        const currentPage = window.location.pathname.split("/").pop(); // Get the current file name
+    const chaletPage = "iphone-16-chalets.html";
+    
+    // Normalize URL for cases where pathname includes directories
+    const currentPage = window.location.href.split("/").pop().split("#")[0].split("?")[0];
 
-        if (currentPage === "iphone-16-chalets.html") {
-            // Refresh the page if already on chalets page
-            window.location.reload();
-        } else {
-            // Redirect to chalets page if on another page
-            window.location.href = "iphone-16-chalets.html";
-        }
+    if (currentPage === chaletPage) {
+        // Refresh if already on the chalets page
+        window.location.reload();
+    } else {
+        // Redirect to the chalets page
+        window.location.href = chaletPage;
     }
+}
 </script>
   </body>
 </html>
