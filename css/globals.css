@@ -81,4 +81,15 @@
   width: 277px;
 }
 
+.group-13, .group-14 {
+  display: block !important;
+}
+
+.group-13, .group-14 {
+  box-sizing: content-box !important;
+}
+
+.group-13, .group-14 {
+  object-fit: contain !important;
+}*/
 
