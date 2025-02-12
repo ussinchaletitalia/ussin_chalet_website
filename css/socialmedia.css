@@ -1,0 +1,50 @@
+/* Fullscreen fixed layout */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+    background-color: #ffffff; /* Match existing design */
+}
+
+/* Instagram feed container */
+.instagram-feed-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; /* Prevent extra scroll */
+}
+
+/* Curator.io feed layout */
+#curator-feed-default-feed-layout {
+    width: 100%;
+    max-width: 600px; /* Limit max width */
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensuring 2 images per row */
+#curator-feed-default-feed-layout .crt-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+#curator-feed-default-feed-layout .crt-post {
+    width: 48%; /* Two images per row */
+    height: auto;
+    aspect-ratio: 1/1; /* Square images */
+}
+
+/* Hide Curator.io branding */
+.crt-logo {
+    display: none !important;
+}
