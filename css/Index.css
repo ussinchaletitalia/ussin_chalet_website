@@ -205,3 +205,66 @@ html, body {
   text-align: center;
   width: 100%;
 }
+
+.iphone-16-homepage {
+  background-image: url("../img/img-5418-2.png") !important;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Ensure Logo is Positioned Correctly */
+.logo-container {
+  position: absolute;
+  top: 40px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+.ussi-chalet-logo {
+  max-width: 200px; /* Adjust as needed */
+  height: auto;
+  display: block;
+}
+
+/* Fix Instagram Logo Placement */
+.group-7 {
+  position: relative;
+  margin-top: 20px; /* Adjust spacing */
+  width: 50px;
+  height: auto;
+}
+
+/* Align Text */
+.authentic-alpine-living {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Button Styling */
+.group-13,
+.group-14 {
+  display: block;
+  width: 200px;
+  height: 80px;
+  margin: 10px auto;
+  object-fit: contain;
+}
+
+/* Copyright Text */
+.x2024-your-chalet-a {
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  margin-top: 20px;
+}
