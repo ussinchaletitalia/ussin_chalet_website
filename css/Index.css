@@ -17,7 +17,7 @@ html, body {
 /* ✅ Ussin Chalet Logo (Moves Separately) */
 .ussi-chalet-logo {
   position: absolute;
-  top: 10%; /* Adjust as needed */
+  top: 100%; /* Adjust as needed */
   left: 50%;
   transform: translateX(-50%);
   max-width: 160px;
