@@ -17,27 +17,27 @@ html, body {
 /* ✅ Ussin Chalet Logo (Moves Separately) */
 .ussi-chalet-logo {
   position: absolute;
-  top: 50%; /* Adjust as needed */
+  top: 20% /* Adjust as needed */
   left: 50%;
   transform: translateX(-50%);
-  max-width: 160px;
+  max-width: 280px;
   height: auto;
 }
 
 /* ✅ Instagram Logo (Moves Separately) */
 .instagram-logo {
   position: absolute;
-  top: 5%; /* Adjust as needed */
+  top: 40%;
   left: 50%;
   transform: translateX(-50%);
-  width: 50px;
-  height: auto;
+  width: auto;
+  height: 125px;
 }
 
 /* ✅ Authentic Alpine Living Text (Moves Separately) */
 .authentic-alpine-living {
   position: absolute;
-  top: 40%;
+  top: 31%;
   font-size: 22px;
   font-weight: bold;
   color: white;
@@ -48,26 +48,26 @@ html, body {
 /* ✅ Buttons (Move Separately) */
 .chalets-button {
   position: absolute;
-  top: 65%;
+  top: 50%;
   left: 50%;
   transform: translateX(-50%);
   width: 200px;
-  height: auto;
+  height: 82px;
 }
 
 .contact-button {
   position: absolute;
-  top: 75%;
+  top: 55%;
   left: 50%;
   transform: translateX(-50%);
   width: 200px;
-  height: auto;
+  height: 82px;
 }
 
 /* ✅ Copyright Text (Moves Separately) */
 .copyright-text {
   position: absolute;
-  bottom: 10px;
+  bottom: 60px;
   text-align: center;
   color: white;
   font-size: 14px;
