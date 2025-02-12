@@ -4,11 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram Feed - Ussin Chalet</title>
+    <link rel="stylesheet" type="text/css" href="css/social-feed.css">
 </head>
 <body>
-    <h1>Instagram Page</h1>
-    <p>This is a test page to check if routing works correctly.</p>
+    <div class="instagram-feed-container">
+        <div id="curator-feed-default-feed-layout">
+            <a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a>
+        </div>
+    </div>
 
-    <a href="../index.html">Go Back to Home</a>
+    <!-- Curator.io Script -->
+    <script type="text/javascript">
+        (function () {
+            var i, e, d = document, s = "script";
+            i = d.createElement("script");
+            i.async = 1;
+            i.charset = "UTF-8";
+            i.src = "https://cdn.curator.io/published/b3bf5241-7c2a-4776-ba50-bb2b3b39a2db.js"; 
+            e = d.getElementsByTagName(s)[0];
+            e.parentNode.insertBefore(i, e);
+        })();
+    </script>
 </body>
 </html>
