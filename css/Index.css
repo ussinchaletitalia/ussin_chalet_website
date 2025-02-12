@@ -1,3 +1,4 @@
+/* Reset styles */
 html, body {
   height: 100%;
   margin: 0;
@@ -5,137 +6,79 @@ html, body {
   overflow: hidden;
 }
 
+/* Main container */
 .iphone-16-homepage {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 100vh;
   height: 100vh;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
+  background: url("../img/img-5418-2.png") no-repeat center center/cover !important;
 }
 
-.overlap-group-container {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+/* Ensure the logo appears above the text */
+.logo-container {
+  position: absolute;
+  top: 40px; /* Adjust position */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
 }
 
-.iphone-16-homepage {
-  background-image: url("../img/img-5418-2.png") !important;
-}
-
-.iphone-16-homepage {
-  background-image: url("../img/img-5418-2.png") !important;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 100vh;
-}
-
-.iphone-16-homepage .group-container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  margin-top: 50px;
-  width: 100%;
-}
-
-.iphone-16-homepage {
-  background-image: url("../img/img-5418-2.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100vh;
-}
-
-.iphone-16-homepage .group-25,
-.iphone-16-homepage .group-26,
-.iphone-16-homepage .group-24 {
-  height: 42px;
-  margin: 5px 0;
-  width: 174px;
-}
-
-.iphone-16-homepage .overlap-group1 {
+.ussi-chalet-logo {
+  max-width: 200px;
   height: auto;
-  position: relative;
-  width: 100%;
-  text-align: center;
+  display: block;
 }
 
-.iphone-16-homepage .group-23,
-.iphone-16-homepage .img_5418-1 {
-  max-width: 100%;
-  height: auto;
-}
-
-.overlap-group2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center align everything */
-  justify-content: center;
-  gap: 10px; /* Reduce the spacing between elements */
-  text-align: center;
-}
-
-/* Move only the logo up */
-.ussi-chalet_logo-white-2 {
-  position: relative;
-  top: -50px; /* Adjust this value as needed */
-}
-
-.ussi-chalet_logo-white-2 {
-    display: block !important;
-    position: relative;
-    max-width: 200px; /* Adjust size */
-    height: auto;
-    margin: 0 auto; /* Center it */
-    z-index: 10; /* Ensure it appears above other elements */
-}
-
-.authentic-alpine-living {
-  position: relative;
-  top: -70px; /* Adjust this value as needed */
-}
-
-/* Move the Instagram icon */
+/* Ensure Instagram icon is properly placed */
 .group-7 {
-  margin-bottom: -20px; /* Move it up */
+  position: relative;
+  width: 50px;
+  height: auto;
+  margin-top: 10px;
 }
 
-.group-13, .group-14 {
-  width: 200px; /* Ensure both are the same */
+/* Center the text */
+.authentic-alpine-living {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Style the buttons */
+.group-13,
+.group-14 {
+  display: block;
+  width: 200px;
   height: 80px;
-  object-fit: contain; /* Ensures proper scaling */
+  margin: 10px auto;
+  object-fit: contain;
+  cursor: pointer;
 }
 
-/* Move Our Chalets button */
+/* Position buttons properly */
 .group-13 {
   margin-top: 0;
-  width: auto;
-  max-width: 100%;
-  height: auto;
 }
 
-/* Move Contact Us button independently */
 .group-14 {
   position: relative;
-  top: -50px; /* Move it up */
+  top: -50px;
 }
 
-/* Move Copyright text independently */
+/* Copyright text */
 .x2024-your-chalet-a {
-  position: relative;
-  top: 270px; /* Move it up */
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  margin-top: 20px;
 }
 
-/* Ensure buttons and logo scale properly */
-.ussi-chalet_logo-white-2,
+/* Ensure logo, buttons, and Instagram scale properly */
+.ussi-chalet-logo,
 .group-7,
 .group-13,
 .group-14 {
@@ -143,13 +86,15 @@ html, body {
   max-width: 80%;
 }
 
-.iphone-16-homepage .overlap-group-container {
+/* Fix layout container */
+.overlap-group-container {
   height: auto;
   position: relative;
   text-align: center;
   width: 100%;
 }
 
+/* Fix footer */
 .iphone-16-homepage .rectangle-7 {
   background-color: var(--dark-tan);
   height: 50px;
@@ -158,113 +103,20 @@ html, body {
   margin-top: 20px;
 }
 
-.iphone-16-homepage .x2024-your-chalet-a {
-  letter-spacing: 0;
-  line-height: normal;
-  text-align: center;
-  font-size: 14px;
-  color: white;
-}
-
-.iphone-16-homepage .authentic-alpine-living {
-  color: var(--white);
-  font-family: var(--font-family-inknut_antiqua);
-  font-size: var(--font-size-l);
-  font-weight: 400;
+/* Fix Instagram logo and prevent overlap issues */
+.overlap-group2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   text-align: center;
 }
 
-.iphone-16-homepage .group-7 {
-  height: 50px;
-  position: relative;
-  width: 50px;
-}
-
-.iphone-16-homepage .group-13,
-.iphone-16-homepage .group-14 {
-  cursor: pointer;
-  height: 80px;
-  position: relative;
-  width: 200px;
-  display: block;
-  margin: 10px auto;
-}
-
-.iphone-16-homepage .ussi-chalet_logo-white-2 {
-  cursor: pointer;
-  height: 80px;
-  position: relative;
-  width: auto;
-  display: block;
-  margin: 20px auto;
-}
-
+/* Ensure everything remains centered */
 .iphone-16-homepage .overlap-group {
   height: auto;
   position: relative;
   text-align: center;
   width: 100%;
-}
-
-.iphone-16-homepage {
-  background-image: url("../img/img-5418-2.png") !important;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
-}
-
-/* Ensure Logo is Positioned Correctly */
-.logo-container {
-  position: absolute;
-  top: 40px; /* Adjust as needed */
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 20;
-}
-
-.ussi-chalet-logo {
-  max-width: 200px; /* Adjust as needed */
-  height: auto;
-  display: block;
-}
-
-/* Fix Instagram Logo Placement */
-.group-7 {
-  position: relative;
-  margin-top: 20px; /* Adjust spacing */
-  width: 50px;
-  height: auto;
-}
-
-/* Align Text */
-.authentic-alpine-living {
-  font-size: 22px;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  margin-top: 20px;
-}
-
-/* Button Styling */
-.group-13,
-.group-14 {
-  display: block;
-  width: 200px;
-  height: 80px;
-  margin: 10px auto;
-  object-fit: contain;
-}
-
-/* Copyright Text */
-.x2024-your-chalet-a {
-  text-align: center;
-  color: white;
-  font-size: 14px;
-  margin-top: 20px;
 }
