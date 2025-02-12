@@ -1491,20 +1491,16 @@
     });
 });
     function handleChaletLogoClick() {
-    const chaletPage = "iphone-16-chalets.html";
-    const currentPage = window.location.pathname.split("/").pop(); // Extracts the actual filename
-    const currentHash = window.location.hash; // Gets the fragment identifier (e.g., #iphone-16-contact-us)
+    const chaletPage = "/mobile/iphone-16-chalets.html#iphone-16-chalets"; // Correct destination
 
-    if (currentPage === chaletPage) {
-        if (currentHash && currentHash !== "#iphone-16-chalets") {
-            // If currently on the contact section, remove the hash to go back to main chalets view
-            history.pushState(null, null, chaletPage);
-        } else {
-            // If already on the chalets page, refresh
-            window.location.reload();
-        }
+    const currentURL = window.location.href;
+    const baseURL = window.location.origin + chaletPage; // Construct the correct full URL
+
+    if (currentURL === baseURL) {
+        // If already on the correct section, refresh the page
+        window.location.reload();
     } else {
-        // If on another page, redirect to the chalets page
+        // Otherwise, redirect to the correct section of the page
         window.location.href = chaletPage;
     }
 }
