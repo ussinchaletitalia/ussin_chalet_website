@@ -27,7 +27,7 @@ html, body {
 /* ✅ Instagram Logo (Moves Separately) */
 .instagram-logo {
   position: absolute;
-  top: 250%; /* Adjust as needed */
+  top: 5%; /* Adjust as needed */
   left: 50%;
   transform: translateX(-50%);
   width: 50px;
