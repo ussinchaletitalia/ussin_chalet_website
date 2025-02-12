@@ -35,6 +35,11 @@ html, body {
     margin: 0 auto;
 }
 
+.ussi-chalet-logo {
+    width: 300px
+    max-width: none;
+}
+
 /* ✅ Push Instagram button down */
 .overlap-group2 {
     display: flex;
