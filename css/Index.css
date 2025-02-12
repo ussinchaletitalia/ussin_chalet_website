@@ -17,7 +17,7 @@ html, body {
 /* ✅ Ussin Chalet Logo (Moves Separately) */
 .ussi-chalet-logo {
   position: absolute;
-  top: 100%; /* Adjust as needed */
+  top: 50%; /* Adjust as needed */
   left: 50%;
   transform: translateX(-50%);
   max-width: 160px;
@@ -27,7 +27,7 @@ html, body {
 /* ✅ Instagram Logo (Moves Separately) */
 .instagram-logo {
   position: absolute;
-  top: 25%; /* Adjust as needed */
+  top: 250%; /* Adjust as needed */
   left: 50%;
   transform: translateX(-50%);
   width: 50px;
