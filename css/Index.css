@@ -29,7 +29,7 @@ html, body {
 /* ✅ Instagram Logo */
 .instagram-logo {
   position: absolute;
-  top: 15%; /* Adjust as needed */
+  top: 5%; /* Adjust as needed */
   left: 50%;
   transform: translateX(-50%);
   width: 50px;
