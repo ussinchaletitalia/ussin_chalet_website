@@ -16,7 +16,7 @@ html, body {
   background: url("../img/img-5418-2.png") no-repeat center center/cover !important;
 }
 
-/* Ensure the logo appears above the text */
+/* ✅ LOGO FIX: Ensuring it appears properly */
 .logo-container {
     position: absolute;
     top: 20px; /* Adjust as needed */
@@ -33,36 +33,34 @@ html, body {
     display: block;
     margin: 0 auto;
     z-index: 1000;
-}}
-
-.ussi-chalet-logo {
-    display: block !important;
-    max-width: 200px; /* Adjust if needed */
-    height: auto;
-    margin: 0 auto; /* Center it */
-    z-index: 9999; /* Make sure it's above everything */
-    position: relative; /* Prevents it from being hidden */
-    opacity: 1 !important;
 }
 
-/* Ensure Instagram icon is properly placed */
+/* ✅ Fix Instagram Button Position */
+.overlap-group2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px; /* Moves Instagram button below logo */
+}
+
+/* ✅ Ensure Instagram button is below the logo */
 .group-7 {
-  position: relative;
   width: 50px;
   height: auto;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
-/* Center the text */
+/* ✅ Fix Positioning of "Authentic Alpine Living" */
 .authentic-alpine-living {
   font-size: 22px;
   font-weight: bold;
   color: white;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 90px; /* Pushes it below the logo */
 }
 
-/* Style the buttons */
+/* ✅ Fix Navigation Buttons */
 .group-13,
 .group-14 {
   display: block;
@@ -73,64 +71,10 @@ html, body {
   cursor: pointer;
 }
 
-/* Position buttons properly */
-.group-13 {
-  margin-top: 0;
-}
-
-.group-14 {
-  position: relative;
-  top: -50px;
-}
-
-/* Copyright text */
+/* ✅ Fix Copyright Text */
 .x2024-your-chalet-a {
   text-align: center;
   color: white;
   font-size: 14px;
   margin-top: 20px;
-}
-
-/* Ensure logo, buttons, and Instagram scale properly */
-.ussi-chalet-logo,
-.group-7,
-.group-13,
-.group-14 {
-  width: auto;
-  max-width: 80%;
-}
-
-/* Fix layout container */
-.overlap-group-container {
-  height: auto;
-  position: relative;
-  text-align: center;
-  width: 100%;
-}
-
-/* Fix footer */
-.iphone-16-homepage .rectangle-7 {
-  background-color: var(--dark-tan);
-  height: 50px;
-  width: 100%;
-  position: relative;
-  margin-top: 20px;
-}
-
-/* Fix Instagram logo and prevent overlap issues */
-.overlap-group2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  text-align: center;
-}
-
-/* Ensure everything remains centered */
-.iphone-16-homepage .overlap-group {
-  height: auto;
-  position: relative;
-  text-align: center;
-  width: 100%;
 }
