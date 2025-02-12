@@ -28,7 +28,8 @@ html, body {
 }
 
 .ussi-chalet-logo {
-    max-width: 300px
+    width: 300px;
+    max-width: none;
     height: auto;
     display: block;
     margin: 0 auto;
