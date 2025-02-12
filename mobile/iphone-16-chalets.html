@@ -1491,17 +1491,16 @@
     });
 });
     function handleChaletLogoClick() {
-    const chaletPage = "/mobile/iphone-16-chalets.html#iphone-16-chalets"; // Correct destination
-
+    const chaletPage = "/mobile/iphone-16-chalets.html#iphone-16-chalets"; // Target destination
     const currentURL = window.location.href;
     const baseURL = window.location.origin + chaletPage; // Construct the correct full URL
 
     if (currentURL === baseURL) {
-        // If already on the correct section, refresh the page
+        // If already on the correct section, force reload
         window.location.reload();
     } else {
-        // Otherwise, redirect to the correct section of the page
-        window.location.href = chaletPage;
+        // Instantly navigate to the correct section
+        window.location.replace(chaletPage);
     }
 }
 </script>
