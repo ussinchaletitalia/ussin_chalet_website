@@ -89,6 +89,15 @@ html, body {
   top: -50px; /* Adjust this value as needed */
 }
 
+.ussi-chalet_logo-white-2 {
+    display: block !important;
+    position: relative;
+    max-width: 200px; /* Adjust size */
+    height: auto;
+    margin: 0 auto; /* Center it */
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
 .authentic-alpine-living {
   position: relative;
   top: -70px; /* Adjust this value as needed */
