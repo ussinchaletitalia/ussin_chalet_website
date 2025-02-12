@@ -17,7 +17,7 @@ html, body {
 /* ✅ Ussin Chalet Logo (Moves Separately) */
 .ussi-chalet-logo {
   position: absolute;
-  top: 20%; /* Adjust as needed */
+  top: 10%; /* Adjust as needed */
   left: 50%;
   transform: translateX(-50%);
   max-width: 280px;
@@ -37,7 +37,7 @@ html, body {
 /* ✅ Authentic Alpine Living Text (Moves Separately) */
 .authentic-alpine-living {
   position: absolute;
-  top: 31%;
+  top: 23%;
   font-size: 22px;
   font-weight: bold;
   color: white;
