@@ -10,76 +10,63 @@ html, body {
 .iphone-16-homepage {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   height: 100vh;
   background: url("../img/img-5418-2.png") no-repeat center center/cover !important;
 }
 
-/* ✅ Fix Logo Placement */
-.logo-container {
-    position: absolute;
-    top: 5%; /* Moves logo further up */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-    width: 100%;
-    text-align: center;
-}
-
+/* ✅ Ussin Chalet Logo */
 .ussi-chalet-logo {
-    width: 300px;
-    max-width: none;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+  position: absolute;
+  top: 5%; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 160px;
+  height: auto;
 }
 
-.ussi-chalet-logo {
-    width: 300px
-    max-width: none;
-}
-
-/* ✅ Push Instagram button down */
-.overlap-group2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 40px; /* Moves Instagram button lower */
-}
-
-/* ✅ Ensure Instagram button is below the logo */
-.group-7 {
+/* ✅ Instagram Logo */
+.instagram-logo {
+  position: absolute;
+  top: 15%; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
   width: 50px;
   height: auto;
-  margin-top: 60px; /* Creates space below logo */
 }
 
-/* ✅ Fix Positioning of "Authentic Alpine Living" */
+/* ✅ Authentic Alpine Living Text */
 .authentic-alpine-living {
+  position: absolute;
+  top: 25%;
   font-size: 22px;
   font-weight: bold;
   color: white;
   text-align: center;
-  margin-top: 40px; /* Pushes it below the Instagram button */
 }
 
-/* ✅ Fix Navigation Buttons */
-.group-13,
-.group-14 {
-  display: block;
+/* ✅ Buttons */
+.chalets-button {
+  position: absolute;
+  top: 65%;
   width: 200px;
-  height: 80px;
-  margin: 15px auto;
-  object-fit: contain;
-  cursor: pointer;
+  height: auto;
 }
 
-/* ✅ Fix Copyright Text */
-.x2024-your-chalet-a {
+.contact-button {
+  position: absolute;
+  top: 75%;
+  width: 200px;
+  height: auto;
+}
+
+/* ✅ Copyright Text */
+.copyright-text {
+  position: absolute;
+  bottom: 10px;
   text-align: center;
   color: white;
   font-size: 14px;
-  margin-top: 20px;
+  width: 100%;
 }
