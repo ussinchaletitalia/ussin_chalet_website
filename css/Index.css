@@ -18,18 +18,22 @@ html, body {
 
 /* Ensure the logo appears above the text */
 .logo-container {
-  position: absolute;
-  top: 40px; /* Adjust position */
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    text-align: center;
+    width: 100%;
 }
 
 .ussi-chalet-logo {
-  max-width: 200px;
-  height: auto;
-  display: block;
-}
+    max-width: 180px; /* Adjust size */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    z-index: 1000;
+}}
 
 .ussi-chalet-logo {
     display: block !important;
