@@ -1494,13 +1494,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // Handle "Our Chalets" button click
     chaletsLink.addEventListener("click", function (event) {
         event.preventDefault();
-        navigateToPage("iphone-16-chalets.html#iphone-16-chalets");
+        toggleMenu(false);
+        setTimeout(() => navigateToPage("iphone-16-chalets.html#iphone-16-chalets"), 200);
     });
 
     // Handle "Contact Us" button click
     contactLink.addEventListener("click", function (event) {
         event.preventDefault();
-        navigateToPage("iphone-16-chalets.html#iphone-16-contact-us");
+        toggleMenu(false);
+        setTimeout(() => navigateToPage("iphone-16-chalets.html#iphone-16-contact-us"), 200);
     });
 
     // Remove underline effect from menu links
@@ -1508,10 +1510,10 @@ document.addEventListener("DOMContentLoaded", function () {
         link.style.textDecoration = "none";
     });
 
-    // ✅ DUPLICATE THE MENU FOR THE CONTACT FORM PAGE
+    // ✅ ADD HAMBURGER MENU TO CONTACT PAGE IF MISSING
     if (document.body.getAttribute("data-page") === "iphone-16-contact-us") {
-        const headerContainer = document.querySelector(".iphone-16-contact-us .group-22-C61RwL"); // Adjust this selector if needed
-        if (headerContainer) {
+        const headerContainer = document.querySelector(".group-22-C61RwL"); // Adjust selector if needed
+        if (headerContainer && !document.querySelector(".group-31-C61RwL")) {
             const clonedMenuButton = menuButton.cloneNode(true);
             headerContainer.appendChild(clonedMenuButton);
             clonedMenuButton.addEventListener("click", function (event) {
