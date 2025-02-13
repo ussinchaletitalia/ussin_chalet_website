@@ -1,4 +1,62 @@
-</head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../css/iphone-16-chalets.css">
+    <link rel="stylesheet" type="text/css" href="../css/styleguide.css">
+    <link rel="stylesheet" type="text/css" href="../css/globals.css">
+
+    <!-- Load Google Maps API -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfmLbJ-Xc-oaIuoFs1NuPRB6FygUWCyY0&callback=initMap"></script>
+    <script>
+      
+      function initMap() {
+    if (typeof google === "undefined" || typeof google.maps === "undefined") {
+        console.error("Google Maps API not loaded yet.");
+        return;
+    }
+
+    console.log("Google Maps API is loaded. Initializing map...");
+
+    const map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: 45.8530410363233, lng: 7.604977028835924 },
+        zoom: 12,
+        mapId: "roadmap",
+    });
+
+    if (google.maps.marker && google.maps.marker.AdvancedMarkerElement) {
+        new google.maps.marker.AdvancedMarkerElement({
+            position: { lat: 45.8530410363233, lng: 7.604977028835924 },
+            map: map,
+            title: "Our Chalet",
+        });
+    } else {
+        console.error("AdvancedMarkerElement is not available. Falling back to basic marker.");
+        new google.maps.Marker({
+            position: { lat: 45.8530410363233, lng: 7.604977028835924 },
+            map: map,
+            title: "Our Chalet",
+        });
+    }
+}
+
+    </script>
+    
+    <style>
+      /* Ensure proper styling for map */
+      #map {
+        width: 100%;
+        max-width: 800px;
+        height: 450px;
+        margin: 20px auto;
+        border-radius: 16px;
+        z-index: 1000;
+      }
+    </style>
+  </head>
+
+  </head>
   <body style="margin: 0; background: #ffffff">
     <input type="hidden" id="anPageName" name="page" value="iphone-16-chalets" />
     <div class="container-center-horizontal">
