@@ -1,8 +1,8 @@
 /* Airbnb Listings Container */
 .airbnb-listings-container {
-    width: 100%;
+    width: 90%;
     max-width: 450px;
-    margin: -1700px auto;
+    margin: -1710px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
