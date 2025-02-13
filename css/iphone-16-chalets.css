@@ -1,4 +1,38 @@
 /* Airbnb Listings Container */
+/* Fix contact details overlapping the hamburger menu */
+.header-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    z-index: 10; /* Ensures the header is above other elements */
+}
+
+.contact-details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    max-width: 250px;
+    z-index: 5; /* Ensures it's below the menu */
+}
+
+.hamburger-menu {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20; /* Ensures it's above everything */
+}
+
+/* Hide any duplicate contact details appearing outside the correct container */
+.hidden-contact {
+    display: none;
+}
+
 .airbnb-listings-container {
     width: 90%;
     max-width: 450px;
