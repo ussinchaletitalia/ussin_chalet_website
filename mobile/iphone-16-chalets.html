@@ -1437,34 +1437,53 @@
     </script>
     <script>
 document.addEventListener("DOMContentLoaded", function () {
-    const menu = document.querySelector(".menu-container");
+    const menu = document.querySelector(".menu-container"); // Menu container
     const menuButton = document.querySelector(".group-31-C61RwL"); // Hamburger menu button
-    const closeButton = document.querySelector(".close-menu");
-    const chaletsLink = document.querySelector("li a[href*='iphone-16-chalets']");
-    const contactLink = document.querySelector("li a[href*='iphone-16-contact-us']");
+    const closeButton = document.querySelector(".close-menu"); // Close button
+    const chaletsLink = document.querySelector("a[href*='iphone-16-chalets']");
+    const contactLink = document.querySelector("a[href*='iphone-16-contact-us']");
 
     if (!menu || !menuButton || !closeButton || !chaletsLink || !contactLink) {
         console.error("Menu elements not found.");
         return;
     }
 
+    // Ensure menu is initially hidden
+    menu.style.display = "none";
+
+    // Toggle menu visibility
+    function toggleMenu(show) {
+        menu.style.display = show ? "flex" : "none";
+    }
+
+    // Open menu when clicking the menu button
     menuButton.addEventListener("click", function (event) {
         event.stopPropagation();
-        menu.style.display = "flex"; // Show the menu
+        toggleMenu(true);
     });
 
+    // Close menu when clicking the close button
     closeButton.addEventListener("click", function () {
-        menu.style.display = "none"; // Hide the menu
+        toggleMenu(false);
     });
 
+    // Close menu when clicking outside of it
     document.addEventListener("click", function (event) {
         if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
-            menu.style.display = "none"; // Close menu when clicking outside
+            toggleMenu(false);
         }
     });
 
+    // Prevent menu from closing when clicking inside
+    menu.addEventListener("click", function (event) {
+        event.stopPropagation();
+    });
+
+    // Function to handle page navigation with refresh if already on the page
     function navigateToPage(targetPage) {
         const currentURL = window.location.href;
+        toggleMenu(false); // Hide menu after a button is clicked
+
         if (currentURL.includes(targetPage)) {
             window.location.reload();
         } else {
@@ -1472,46 +1491,36 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Handle navigation for the "Our Chalets" button
+    // Handle "Our Chalets" button click
     chaletsLink.addEventListener("click", function (event) {
         event.preventDefault();
         navigateToPage("iphone-16-chalets.html#iphone-16-chalets");
     });
 
-    // Handle navigation for the "Contact Us" button
+    // Handle "Contact Us" button click
     contactLink.addEventListener("click", function (event) {
         event.preventDefault();
         navigateToPage("iphone-16-chalets.html#iphone-16-contact-us");
     });
-});
 
-// Remove underline effect from menu links
-document.addEventListener("DOMContentLoaded", function () {
+    // Remove underline effect from menu links
     document.querySelectorAll(".menu-container ul li a").forEach(link => {
         link.style.textDecoration = "none";
     });
-});
 
-
-// Remove underline effect from menu links
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".menu-container ul li a").forEach(link => {
-        link.style.textDecoration = "none";
-    });
-});
-    function handleChaletLogoClick() {
-    const chaletPage = "/mobile/iphone-16-chalets.html#iphone-16-chalets"; // Target destination
-    const currentURL = window.location.href;
-    const baseURL = window.location.origin + chaletPage; // Construct the correct full URL
-
-    if (currentURL === baseURL) {
-        // If already on the correct section, force reload
-        window.location.reload();
-    } else {
-        // Instantly navigate to the correct section
-        window.location.replace(chaletPage);
+    // ✅ DUPLICATE THE MENU FOR THE CONTACT FORM PAGE
+    if (document.body.getAttribute("data-page") === "iphone-16-contact-us") {
+        const headerContainer = document.querySelector(".iphone-16-contact-us .group-22-C61RwL"); // Adjust this selector if needed
+        if (headerContainer) {
+            const clonedMenuButton = menuButton.cloneNode(true);
+            headerContainer.appendChild(clonedMenuButton);
+            clonedMenuButton.addEventListener("click", function (event) {
+                event.stopPropagation();
+                toggleMenu(true);
+            });
+        }
     }
-}
+});
 </script>
     <script>
     function redirectToSocialFeed() {
