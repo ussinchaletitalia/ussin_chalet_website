@@ -30,7 +30,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    zoom; 0.6;
+    zoom: 0.6;
 }
 
 /* Fix Airbnb iframe styling */
