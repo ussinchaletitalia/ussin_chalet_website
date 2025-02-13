@@ -36,10 +36,13 @@
 .airbnb-embed-frame iframe {
     width: 100% !important;
     height: 100% !important;
-    object-fit: contain;
-    border-radius: 10px;
-    border: none;
+    object-fit: cover !important;
+    overflow: hidden !important;
+    pointer-events: none; /* Prevents interactions with iframe */
+    user-select: none; /* Prevents accidental selection */
+    -webkit-user-drag: none; /* Specifically for Safari */
 }
+
 .iphone-16-chalets {
   background-color: #ffffff;
   height: 1912px;
