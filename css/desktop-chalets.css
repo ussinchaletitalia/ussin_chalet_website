@@ -40,7 +40,7 @@ html, body {
     font-size: var(--font-size-xxl);
     font-weight: 700;
     text-align: center;
-    margin-top: -70px; /* Reduce space above the heading */
+    margin-top: -1100px; /* Reduce space above the heading */
     margin-bottom: -20px; /* Reduce space below the heading */
     position: relative;
     z-index: 1000; /* Ensure it stays above the map */
