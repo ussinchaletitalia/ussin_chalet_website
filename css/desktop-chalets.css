@@ -88,6 +88,7 @@ html, body {
     position: absolute;
     top: 29px;
     width: 1280px;
+    object: contain;
 }
 
 .desktop-chalets .rectangle-3 {
