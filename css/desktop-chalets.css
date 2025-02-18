@@ -118,7 +118,7 @@ html, body {
     font-family: var(--font-family-kantumruy);
     font-size: var(--font-size-xl);
     font-weight: 400;
-    left: 334px;
+    left: 350px;
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
@@ -245,7 +245,7 @@ html, body {
 .desktop-chalets .group-22 {
     cursor: pointer;
     height: 101px;
-    left: 534px;
+    left: 550px;
     position: absolute;
     top: 1000px;
     width: 275px;
