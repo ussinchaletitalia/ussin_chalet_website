@@ -67,6 +67,7 @@ html, body {
 /* Ensure other elements stay properly aligned */
 .desktop-chalets .airbnb-listings {
     margin-bottom: 50px; /* Space between Airbnb cards and the map */
+    left: 300px;
 }
 
 .desktop-chalets .contact-us {
