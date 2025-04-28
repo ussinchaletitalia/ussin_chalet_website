@@ -42,7 +42,7 @@ html, body {
 }
 
 /* Centered Navigation Buttons */
-.nav-center {
+.nav-right {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
