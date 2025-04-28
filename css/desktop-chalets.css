@@ -10,6 +10,11 @@ html, body {
   font-family: 'Kantumruy', sans-serif;
 }
 
+body {
+  margin: 0; /* <<< ADD THIS */
+  padding: 0; /* <<< ADD THIS */
+}
+
 .page-container {
   display: flex;
   flex-direction: column;
