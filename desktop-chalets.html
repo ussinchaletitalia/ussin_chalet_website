@@ -1,149 +1,64 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <!-- Original meta tags from Figma export (if needed) -->
-    <meta name="viewport" content="width=1280, maximum-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="https://animaproject.s3.amazonaws.com/home/favicon.png"
-    />
-    <meta name="og:type" content="website" />
-    <meta name="twitter:card" content="photo" />
-    <link rel="stylesheet" type="text/css" href="css/desktop-chalets.css" />
-    <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
-    <link rel="stylesheet" type="text/css" href="css/globals.css" />
-    
-    <!-- Google Maps script (no CSS) -->
-    <script
-      async
-      defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfmLbJ-Xc-oaIuoFs1NuPRB6FygUWCyY0&callback=initMap"
-    ></script>
-    <script>
-      function initMap() {
-        const location = { lat: 45.88694, lng: 7.62031 };
-        const map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 14,
-          center: location,
-        });
-        new google.maps.Marker({
-          position: location,
-          map: map,
-          title: 'Ussin Chalet',
-        });
-      }
-    </script>
-  </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ussin Chalet</title>
 
-  <body style="margin: 0; background: #ffffff">
-    <input type="hidden" id="anPageName" name="page" value="desktop-chalets" />
-    <div class="container-center-horizontal">
-      <div class="desktop-chalets screen">
-        <div class="overlap-group1">
-          <!-- Original Figma shapes and images -->
-          <div class="rectangle-4"></div>
-          <img class="mask-group" src="img/mask-group.png" alt="Mask group" />
-          <div class="rectangle-3"></div>
+  <link rel="stylesheet" href="css/desktop-chalets.css">
 
-          <!-- OUR CHALETS heading (unchanged) -->
-          <div class="our-chalets our">OUR CHALETS</div>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfmLbJ-Xc-oaIuoFs1NuPRB6FygUWCyY0&callback=initMap"></script>
+  <script>
+    function initMap() {
+      const location = { lat: 45.88694, lng: 7.62031 };
+      const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 14,
+        center: location,
+      });
+      new google.maps.Marker({
+        position: location,
+        map: map,
+        title: 'Ussin Chalet',
+      });
+    }
+  </script>
+</head>
 
-          <!-- Absolutely-positioned container for the 2 Airbnb cards -->
-          <div
-            class="airbnb-listings"
-            style="
-              position: absolute;
-              top: 280px;
-              left: 230px;
-              width: 880px;
-              display: flex;
-              gap: 40px;
-              z-index: 999;
-            "
-          >
-            <!-- Airbnb Listing 1 -->
-            <div
-              class="airbnb-embed-frame"
-              data-id="979009583861992990"
-              data-view="home"
-              data-hide-price="true"
-              style="width: 450px; height: 300px; margin: auto;"
-            >
-              <a
-                href="https://www.airbnb.it/rooms/979009583861992990?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget"
-                >Visto su Airbnb</a
-              >
-              <a
-                href="https://www.airbnb.it/rooms/979009583861992990?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget"
-                rel="nofollow"
-                >Chalet · Valtournenche · ★4.67 · 1 camera da letto · 1 letto · 1 bagno</a
-              >
-              <script async src="https://www.airbnb.it/embeddable/airbnb_jssdk"></script>
-            </div>
+<body>
+  <header class="header">
+    <img src="img/ussi-chalet-logo-white-1.png" alt="Ussin Chalet Logo" class="logo">
+    <nav class="nav">
+      <a href="#chalets">OUR CHALETS</a>
+      <a href="desktop-contact-us.html">CONTACT US</a>
+    </nav>
+  </header>
 
-            <!-- Airbnb Listing 2 -->
-            <div
-              class="airbnb-embed-frame"
-              data-id="1189233581383934270"
-              data-view="home"
-              data-hide-price="true"
-              style="width: 450px; height: 300px; margin: auto;"
-            >
-              <a
-                href="https://www.airbnb.it/rooms/1189233581383934270?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget"
-                >Visto su Airbnb</a
-              >
-              <a
-                href="https://www.airbnb.it/rooms/1189233581383934270?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget"
-                rel="nofollow"
-                >Chalet · Valtournenche · ★4.75 · 2 camere da letto · 2 letti · 2 bagni</a
-              >
-              <script async src="https://www.airbnb.it/embeddable/airbnb_jssdk"></script>
-            </div>
-          </div>
+  <section class="hero">
+    <h1>OUR CHALETS</h1>
+  </section>
 
-          <!-- paragraph, contact link, etc... -->
-          <p class="we-offer-apartments">We offer apartments located in the stunning Italian Alps near Cervinia. Perfect for skiing, hiking, or
-            relaxing in the beautiful mountain landscape.</p>
-          <a href="desktop-contact-us.html">
-            <img class="group-22" src="img/group-22-1.png" alt="Group 22" />
-          </a>
+  <section class="airbnb-listings" id="chalets">
+    <iframe src="https://www.airbnb.it/embeddable/home?externalPageUrl=https%3A%2F%2Fwww.ussinchalet.com%2Fdesktop-chalets.html&hide-price=true&id=979009583861992990"
+      frameborder="0" allowfullscreen></iframe>
 
-          <div class="our-location our">OUR LOCATION</div>
+    <iframe src="https://www.airbnb.it/embeddable/home?externalPageUrl=https%3A%2F%2Fwww.ussinchalet.com%2Fdesktop-chalets.html&hide-price=true&id=1189233581383934270"
+      frameborder="0" allowfullscreen></iframe>
+  </section>
 
-          <div class="map-container">
-            <div id="map"></div>
-          </div>
+  <section class="about">
+    <p>We offer apartments located in the stunning Italian Alps near Cervinia.<br>
+      Perfect for skiing, hiking, or relaxing in the beautiful mountain landscape.</p>
+    <a href="desktop-contact-us.html" class="btn">CONTACT US</a>
+  </section>
 
-          <!-- Everything else from figma remains -->
-          <div class="our-chalets our">OUR CHALETS</div>
-          <div class="our-location our">OUR LOCATION</div>
-          </p>
-          <div class="rectangle-5"></div>
-          <div class="frame-1">
-          </div>
-          <div class="ussinchaletgmailcom-39-0123-456789">ussinchalet@gmail.com<br />+39 0123 456789</div>
-          <p class="x2024-your-chalet-a kannadamn-regular-normal-vista-white-14px">
-            <span class="kannadamn-regular-normal-vista-white-14px">© </span
-            ><span class="span1">2024 Your Chalet and Apartment Rentals - All rights reserved</span>
-          </p>
-          <div class="contact-us">CONTACT US</div>
-          <div class="overlap-group">
-            <div class="rectangle-6"></div>
-            <div class="our-chalets-1">OUR CHALETS</div>
-            <a href="desktop-contact-us.html"><div class="contact-us-1">CONTACT US</div></a>
-            <a href="desktop-homepage.html">
-              <img class="ussi-chalet_logo-white-1" src="img/ussi-chalet-logo-white-1.png" alt="Ussi-Chalet_logo-white" />
-            </a>
-          </div>
-          <a href="desktop-contact-us.html">
-            <img class="group-22" src="img/group-22-1.png" alt="Group 22" />
-          </a>
-          <!-- other images, etc... -->
-        </div>
-      </div>
-    </div>
-  </body>
+  <section class="location-map">
+    <h2>OUR LOCATION</h2>
+    <div id="map" class="map"></div>
+  </section>
+
+  <footer class="footer">
+    <p>ussinchalet@gmail.com<br>+39 0123 456789</p>
+    <p>© 2024 Your Chalet and Apartment Rentals - All rights reserved</p>
+  </footer>
+</body>
 </html>
