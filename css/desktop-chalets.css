@@ -67,19 +67,20 @@ html, body {
 }
 
 /* Airbnb Listings */
-.airbnb-listings {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding: 60px 20px;
-}
-
 .airbnb-listings iframe {
-  width: 400px;   /* or whatever you like */
-  height: 550px;  /* force both to 550px */
+  width: 400px;         /* fixed width */
+  height: 560px;        /* fixed height to align both frames */
   border: none;
   border-radius: 12px;
   overflow: hidden;
+}
+
+.airbnb-listings {
+  display: flex;
+  justify-content: center;
+  gap: 40px;            /* space between frames */
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 /* About Section */
