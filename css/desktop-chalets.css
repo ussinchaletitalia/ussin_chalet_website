@@ -67,20 +67,22 @@ html, body {
 }
 
 /* Airbnb Listings */
-.airbnb-listings iframe {
-  width: 400px;         /* fixed width */
-  height: 560px;        /* fixed height to align both frames */
-  border: none;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
 .airbnb-listings {
   display: flex;
   justify-content: center;
-  gap: 40px;            /* space between frames */
+  gap: 40px;
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+.airbnb-listings iframe {
+  width: 450px;         /* slightly wider to fit full listing */
+  height: 600px;        /* taller to fit full content */
+  border: 1px solid #e0e0e0; /* light grey border */
+  border-radius: 16px;  /* rounded corners */
+  background: white;    /* white background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  overflow: hidden;
 }
 
 /* About Section */
