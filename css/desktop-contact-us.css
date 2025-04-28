@@ -1,44 +1,32 @@
-/* Define Variables */
-:root {
-  --white: #ffffff;
-  --vista-white: #fbf8f7;
-  --dark-tan: #641717;
-  --dawn-pink: #f5e4dc;
-  --black: #000000;
-
-  --font-family-kantumruy: 'Kantumruy', sans-serif;
-  --font-family-inknut_antiqua: 'Inknut Antiqua', serif;
-}
-
-/* Base Page Setup */
+/* Base setup */
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   background: var(--vista-white);
-  font-family: var(--font-family-kantumruy);
+  font-family: 'Kantumruy', sans-serif;
 }
 
-/* Page Container */
+/* Page container flex */
 .page-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* Content (Main part) */
+/* Content grows to push footer down */
 .content {
   flex: 1;
 }
 
-/* Navigation Bar */
+/* Top Navigation */
 .top-navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--dark-tan);
   padding: 15px 30px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  height: 80px; /* consistent height */
 }
 
 .ussi-chalet-logo {
@@ -69,7 +57,7 @@ html, body {
   color: var(--dawn-pink);
 }
 
-/* Contact Section */
+/* Contact section */
 .desktop-contact-us {
   width: 100%;
   max-width: 1280px;
@@ -85,7 +73,7 @@ html, body {
   font-weight: 700;
   color: var(--dark-tan);
   letter-spacing: 5px;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .ussinchaletgmailcom-39-0123-456789 {
@@ -94,18 +82,7 @@ html, body {
   margin: 20px 0;
 }
 
-/* Background Rectangle (Optional) */
-.rectangle-4 {
-  background-color: var(--vista-white);
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-}
-
-/* Form Styling */
+/* Form */
 .form-container {
   background-color: #f9f5f2;
   border-radius: 12px;
@@ -166,6 +143,6 @@ html, body {
 
 .footer p {
   margin: 5px 0;
-  font-family: var(--font-family-kantumruy);
+  font-family: 'Kantumruy', sans-serif;
   font-size: 14px;
 }
