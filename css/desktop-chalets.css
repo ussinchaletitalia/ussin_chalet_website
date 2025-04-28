@@ -5,11 +5,15 @@
   box-sizing: border-box;
 }
 
-body, html {
+html, body {
+  height: 100%;
   font-family: 'Kantumruy', sans-serif;
-  min-height: 100vh;
+}
+
+.page-container {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Header */
@@ -33,8 +37,17 @@ body, html {
   font-weight: bold;
 }
 
+.nav a:first-child {
+  margin-left: 0;
+}
+
 .nav a:hover {
   text-decoration: underline;
+}
+
+/* Main content */
+.content {
+  flex: 1;
 }
 
 /* Hero Section */
@@ -117,7 +130,6 @@ body, html {
   color: white;
   text-align: center;
   padding: 20px;
-  margin-top: auto;
 }
 
 .footer p {
