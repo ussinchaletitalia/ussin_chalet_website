@@ -7,33 +7,31 @@ html, body {
   font-family: 'Kantumruy', sans-serif;
 }
 
-/* Page container flex */
+/* Page container setup */
 .page-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* Content grows to push footer down */
-.content {
-  flex: 1;
-}
-
-/* Top Navigation */
-.top-navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Navigation */
+.header {
   background-color: var(--dark-tan);
-  padding: 15px 30px;
-  height: 80px; /* consistent height */
+  padding: 10px 30px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.ussi-chalet-logo {
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.logo {
   height: 50px;
-  width: auto;
   object-fit: contain;
-  margin-right: auto;
 }
 
 .nav-buttons {
@@ -57,65 +55,86 @@ html, body {
   color: var(--dawn-pink);
 }
 
-/* Contact section */
+/* Main content flex to push footer */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contact Page Section */
 .desktop-contact-us {
-  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
+  width: 100%;
   padding: 40px 20px;
   text-align: center;
   position: relative;
 }
 
+.rectangle-4 {
+  background-color: var(--vista-white);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Contact Heading */
 .contact-us {
   font-family: var(--font-family-inknut_antiqua);
   font-size: 36px;
   font-weight: 700;
   color: var(--dark-tan);
   letter-spacing: 5px;
-  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
+/* Email Text */
 .ussinchaletgmailcom-39-0123-456789 {
-  color: var(--black);
   font-size: 18px;
-  margin: 20px 0;
+  color: var(--black);
+  margin-bottom: 40px;
 }
 
-/* Form */
+/* Form Container */
 .form-container {
   background-color: #f9f5f2;
   border-radius: 12px;
   padding: 30px;
   width: 90%;
   max-width: 600px;
-  margin: 40px auto;
+  margin: 0 auto;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
 .form-container label {
-  display: block;
   text-align: left;
-  margin-bottom: 8px;
   font-size: 16px;
   color: #64442f;
   font-weight: 600;
+  margin-bottom: 5px;
 }
 
 .form-container input,
 .form-container textarea {
   width: 100%;
-  padding: 10px;
-  margin-top: 4px;
-  margin-bottom: 20px;
+  padding: 12px;
   border: 2px solid #64442f;
   border-radius: 6px;
   font-size: 16px;
   background: var(--white);
+  margin-bottom: 20px;
 }
 
 .form-container button {
-  width: 100%;
   background-color: #8a4d41;
   color: var(--white);
   padding: 14px;
@@ -143,6 +162,6 @@ html, body {
 
 .footer p {
   margin: 5px 0;
-  font-family: 'Kantumruy', sans-serif;
   font-size: 14px;
+  font-family: 'Kantumruy', sans-serif;
 }
