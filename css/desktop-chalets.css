@@ -77,7 +77,7 @@ html, body {
 
 .airbnb-listings iframe {
   width: 450px;         /* slightly wider to fit full listing */
-  height: 450px;        /* taller to fit full content */
+  height: 470px;        /* taller to fit full content */
   border: 1px solid #e0e0e0; /* light grey border */
   border-radius: 16px;  /* rounded corners */
   background: white;    /* white background */
