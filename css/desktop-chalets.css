@@ -77,10 +77,9 @@ body {
 /* Hero Section */
 .hero {
   background: url('../img/mask-group.png') no-repeat center center;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center top;
-  background-color: #fff; /* fallback background if image doesn't fill */
+  background-color: #fff;
   height: 400px;
   display: flex;
   align-items: center;
