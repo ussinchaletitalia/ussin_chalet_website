@@ -17,32 +17,53 @@ html, body {
 }
 
 /* Header */
-.header {
-  background-color: #6a0000;
+.top-navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  background-color: #640f0f; /* Same red */
+  padding: 0 50px;
+  height: 100px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
-.logo {
-  height: 40px;
+/* Logo */
+.nav-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
 }
 
-.nav a {
-  color: #fff;
+.ussi-chalet-logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Centered Navigation Buttons */
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.nav-button {
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
   text-decoration: none;
-  margin-left: 30px;
-  font-size: 18px;
-  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-.nav a:first-child {
-  margin-left: 0;
-}
-
-.nav a:hover {
-  text-decoration: underline;
+.nav-button:hover {
+  color: #f8e8e8;
 }
 
 /* Main content */
