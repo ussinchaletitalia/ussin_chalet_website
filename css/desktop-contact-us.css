@@ -1,144 +1,138 @@
-/* Base setup */
+/* Base Page Setup */
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background: var(--vista-white);
+  background: #fdf8f7; /* Soft off-white background */
   font-family: 'Kantumruy', sans-serif;
 }
 
-/* Page container setup */
+/* Page structure */
 .page-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* Navigation */
-.header {
-  background-color: var(--dark-tan);
-  padding: 10px 30px;
+.content {
+  flex: 1;
+}
+
+/* Navigation Bar */
+.top-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #640f0f;
+  padding: 0 50px;
+  height: 100px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.nav-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
-.logo {
-  height: 50px;
+.ussi-chalet-logo {
+  height: 60px;
+  width: auto;
   object-fit: contain;
+  display: block;
 }
 
 .nav-buttons {
   display: flex;
+  align-items: center;
   gap: 50px;
 }
 
 .nav-button {
-  font-family: var(--font-family-inknut_antiqua);
-  font-size: 20px;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--white);
+  color: white;
   text-decoration: none;
-  padding: 10px 15px;
   transition: color 0.3s ease;
 }
 
 .nav-button:hover {
-  color: var(--dawn-pink);
+  color: #f8e8e8;
 }
 
-/* Main content flex to push footer */
-.content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Contact Page Section */
+/* Contact Section */
 .desktop-contact-us {
+  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  width: 100%;
   padding: 40px 20px;
   text-align: center;
   position: relative;
 }
 
-.rectangle-4 {
-  background-color: var(--vista-white);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-/* Contact Heading */
 .contact-us {
-  font-family: var(--font-family-inknut_antiqua);
-  font-size: 36px;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 48px;
   font-weight: 700;
-  color: var(--dark-tan);
-  letter-spacing: 5px;
-  margin-bottom: 20px;
+  color: #640f0f;
+  letter-spacing: 4px;
+  margin-top: 40px;
+  margin-bottom: 10px;
 }
 
-/* Email Text */
-.ussinchaletgmailcom-39-0123-456789 {
+.contact-email {
+  color: #000000;
   font-size: 18px;
-  color: var(--black);
+  font-weight: 500;
   margin-bottom: 40px;
 }
 
-/* Form Container */
+/* Rectangle background (if needed) */
+.rectangle-4 {
+  background-color: #fdf8f7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+/* Form Section */
 .form-container {
   background-color: #f9f5f2;
   border-radius: 12px;
   padding: 30px;
   width: 90%;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 40px auto;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.form-container form {
-  display: flex;
-  flex-direction: column;
-}
-
 .form-container label {
+  display: block;
   text-align: left;
-  font-size: 16px;
+  margin-bottom: 8px;
+  font-size: 18px;
   color: #64442f;
-  font-weight: 600;
-  margin-bottom: 5px;
+  font-weight: 700;
 }
 
 .form-container input,
 .form-container textarea {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
+  margin-top: 4px;
+  margin-bottom: 20px;
   border: 2px solid #64442f;
   border-radius: 6px;
   font-size: 16px;
-  background: var(--white);
-  margin-bottom: 20px;
+  background: #ffffff;
 }
 
 .form-container button {
+  width: 100%;
   background-color: #8a4d41;
-  color: var(--white);
+  color: white;
   padding: 14px;
-  font-family: var(--font-family-inknut_antiqua);
+  font-family: 'Inknut Antiqua', serif;
   font-size: 18px;
   font-weight: 700;
   border: none;
@@ -153,15 +147,14 @@ html, body {
 
 /* Footer */
 .footer {
-  background-color: var(--dark-tan);
-  color: var(--white);
+  background-color: #640f0f;
+  color: white;
   text-align: center;
   padding: 20px 0;
-  margin-top: auto;
+  font-size: 14px;
+  font-family: 'Kantumruy', sans-serif;
 }
 
 .footer p {
   margin: 5px 0;
-  font-size: 14px;
-  font-family: 'Kantumruy', sans-serif;
 }
