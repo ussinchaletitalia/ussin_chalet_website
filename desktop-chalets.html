@@ -2,70 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ussin Chalet</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <title>Ussin Chalet</title>
+
+  <link rel="stylesheet" href="css/desktop-chalets.css">
+
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfmLbJ-Xc-oaIuoFs1NuPRB6FygUWCyY0&callback=initMap"></script>
+  <script>
+    function initMap() {
+      const location = { lat: 45.88694, lng: 7.62031 };
+      const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 14,
+        center: location,
+      });
+      new google.maps.Marker({
+        position: location,
+        map: map,
+        title: 'Ussin Chalet',
+      });
+    }
+  </script>
 </head>
+
 <body>
+  <div class="page-container">
 
-<header>
-  <div class="navbar">
-    <img src="img/ussi-chalet-logo-white-1.png" alt="Ussin Chalet Logo" class="logo">
-    <nav>
-      <a href="#chalets">OUR CHALETS</a>
-      <a href="#contact">CONTACT US</a>
-    </nav>
+    <header class="header">
+      <img src="img/ussi-chalet-logo-white-1.png" alt="Ussin Chalet Logo" class="logo">
+      <nav class="nav">
+        <a href="#chalets">OUR CHALETS</a>
+        <a href="desktop-contact-us.html">CONTACT US</a>
+      </nav>
+    </header>
+
+    <main class="content">
+      <section class="hero">
+        <h1>OUR CHALETS</h1>
+      </section>
+
+      <section class="airbnb-listings" id="chalets">
+        <iframe src="https://www.airbnb.it/embeddable/home?externalPageUrl=https%3A%2F%2Fwww.ussinchalet.com%2Fdesktop-chalets.html&hide-price=true&id=979009583861992990"
+          frameborder="0" allowfullscreen></iframe>
+
+        <iframe src="https://www.airbnb.it/embeddable/home?externalPageUrl=https%3A%2F%2Fwww.ussinchalet.com%2Fdesktop-chalets.html&hide-price=true&id=1189233581383934270"
+          frameborder="0" allowfullscreen></iframe>
+      </section>
+
+      <section class="about">
+        <p>We offer apartments located in the stunning Italian Alps near Cervinia.<br>
+          Perfect for skiing, hiking, or relaxing in the beautiful mountain landscape.</p>
+        <a href="desktop-contact-us.html" class="btn">CONTACT US</a>
+      </section>
+
+      <section class="location-map">
+        <h2>OUR LOCATION</h2>
+        <div id="map" class="map"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>ussinchalet@gmail.com<br>+39 0123 456789</p>
+      <p>© 2024 Your Chalet and Apartment Rentals - All rights reserved</p>
+    </footer>
+
   </div>
-  <div class="hero-section">
-    <img src="img/mask-group.png" alt="Mountains" class="hero-image">
-    <h1>OUR CHALETS</h1>
-  </div>
-</header>
-
-<main>
-  <section id="chalets" class="chalets-section">
-    <div class="chalets-container">
-      <div class="chalet-card">
-        <iframe src="https://www.airbnb.it/embeddable/home?externalPageUrl=https%3A%2F%2Fwww.airbnb.it%2Frooms%2F979009583861992990" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="chalet-card">
-        <iframe src="https://www.airbnb.it/embeddable/home?externalPageUrl=https%3A%2F%2Fwww.airbnb.it%2Frooms%2F1189233581383934270" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
-  </section>
-
-  <section class="description-section">
-    <p>We offer apartments located in the stunning Italian Alps near Cervinia.<br>
-    Perfect for skiing, hiking, or relaxing in the beautiful mountain landscape.</p>
-    <a href="#contact" class="contact-button">CONTACT US</a>
-  </section>
-
-  <section class="location-section">
-    <h2>OUR LOCATION</h2>
-    <div id="map"></div>
-  </section>
-</main>
-
-<footer>
-  <p>© 2024 Ussin Chalet and Apartment Rentals - All rights reserved</p>
-  <p>ussinchalet@gmail.com | +39 0123 456789</p>
-</footer>
-
-<script>
-function initMap() {
-  const location = { lat: 45.88694, lng: 7.62031 };
-  const map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 14,
-    center: location,
-  });
-  new google.maps.Marker({
-    position: location,
-    map: map,
-    title: 'Ussin Chalet',
-  });
-}
-</script>
-
 </body>
 </html>
