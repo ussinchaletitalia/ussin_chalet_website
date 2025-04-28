@@ -1,51 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ussin Chalet - Contact Us</title>
 
-  <link rel="stylesheet" href="css/desktop-contact-us.css">
-  <link rel="stylesheet" href="css/styleguide.css">
-  <link rel="stylesheet" href="css/globals.css">
+  <link rel="stylesheet" href="css/desktop-contact-us.css" />
+  <link rel="stylesheet" href="css/styleguide.css" />
+  <link rel="stylesheet" href="css/globals.css" />
 </head>
 
 <body>
   <div class="page-container">
 
-    <header class="top-navigation">
-      <a href="index.html">
-        <img class="ussi-chalet-logo" src="img/ussi-chalet-logo-white-1.png" alt="Ussin Chalet Logo">
-      </a>
-      <div class="nav-buttons">
-        <a href="desktop-chalets.html" class="nav-button">OUR CHALETS</a>
-        <a href="desktop-contact-us.html" class="nav-button">CONTACT US</a>
+    <!-- Navigation Bar -->
+    <header class="header">
+      <div class="nav-wrapper">
+        <a href="index.html">
+          <img src="img/ussi-chalet-logo-white-1.png" alt="Ussin Chalet Logo" class="logo">
+        </a>
+        <nav class="nav-buttons">
+          <a href="desktop-chalets.html" class="nav-button">OUR CHALETS</a>
+          <a href="desktop-contact-us.html" class="nav-button">CONTACT US</a>
+        </nav>
       </div>
     </header>
 
+    <!-- Main Content -->
     <main class="content">
-      <div class="desktop-contact-us screen">
-        <div class="contact-us">CONTACT US</div>
+
+      <section class="desktop-contact-us">
+        <div class="rectangle-4"></div>
+
+        <h1 class="contact-us">CONTACT US</h1>
+
         <p class="ussinchaletgmailcom-39-0123-456789">
-          ussinchalet@gmail.com | +39 0123 456789
+          ussinchalet@gmail.com
         </p>
 
         <div class="form-container">
           <form action="https://formspree.io/f/xkggklva" method="POST">
-            <label>Your email:
-              <input type="email" name="email" required>
-            </label>
-            <label>Your message:
-              <textarea name="message" rows="5" required></textarea>
-            </label>
+            <label for="email">Your email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
             <button type="submit">Send</button>
           </form>
         </div>
-      </div>
+      </section>
+
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
-      <p>ussinchalet@gmail.com<br>+39 0123 456789</p>
+      <p>ussinchalet@gmail.com</p>
       <p>© 2024 Your Chalet and Apartment Rentals - All rights reserved</p>
     </footer>
 
