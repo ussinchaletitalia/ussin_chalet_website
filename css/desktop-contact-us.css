@@ -1,20 +1,32 @@
+/* Define Variables */
+:root {
+  --white: #ffffff;
+  --vista-white: #fbf8f7;
+  --dark-tan: #641717;
+  --dawn-pink: #f5e4dc;
+  --black: #000000;
+
+  --font-family-kantumruy: 'Kantumruy', sans-serif;
+  --font-family-inknut_antiqua: 'Inknut Antiqua', serif;
+}
+
 /* Base Page Setup */
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   background: var(--vista-white);
-  font-family: 'Kantumruy', sans-serif;
+  font-family: var(--font-family-kantumruy);
 }
 
-/* Page container flex structure */
+/* Page Container */
 .page-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* Content area flex to push footer */
+/* Content (Main part) */
 .content {
   flex: 1;
 }
@@ -38,7 +50,7 @@ html, body {
 
 .nav-buttons {
   display: flex;
-  gap: 50px; /* Moderate gap between buttons */
+  gap: 50px;
 }
 
 .nav-button {
@@ -73,7 +85,7 @@ html, body {
   font-weight: 700;
   color: var(--dark-tan);
   letter-spacing: 5px;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .ussinchaletgmailcom-39-0123-456789 {
@@ -82,7 +94,7 @@ html, body {
   margin: 20px 0;
 }
 
-/* Rectangle background (if needed) */
+/* Background Rectangle (Optional) */
 .rectangle-4 {
   background-color: var(--vista-white);
   position: absolute;
@@ -93,7 +105,7 @@ html, body {
   z-index: -1;
 }
 
-/* Form Section */
+/* Form Styling */
 .form-container {
   background-color: #f9f5f2;
   border-radius: 12px;
@@ -154,6 +166,6 @@ html, body {
 
 .footer p {
   margin: 5px 0;
-  font-family: 'Kantumruy', sans-serif;
+  font-family: var(--font-family-kantumruy);
   font-size: 14px;
 }
