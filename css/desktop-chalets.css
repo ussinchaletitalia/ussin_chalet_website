@@ -48,7 +48,7 @@ html, body {
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-  gap: 80px;
+  gap: 120px;
 }
 
 .nav-button {
