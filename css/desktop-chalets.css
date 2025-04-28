@@ -10,10 +10,12 @@ html, body {
   font-family: 'Kantumruy', sans-serif;
 }
 
-body {
-  margin: 0; /* <<< ADD THIS */
-  padding: 0; /* <<< ADD THIS */
+/* --- THIS IS THE MISSING PART! --- */
+header {
+  margin: 0;
+  padding: 0;
 }
+/* --------------------------------- */
 
 .page-container {
   display: flex;
@@ -26,15 +28,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #640f0f; /* Same red */
+  background-color: #640f0f;
   padding: 0 50px;
   height: 100px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
-  margin-top: 0;
 }
 
-/* Logo */
 .nav-left {
   flex: 1;
   display: flex;
@@ -47,7 +47,6 @@ body {
   object-fit: contain;
 }
 
-/* Centered Navigation Buttons */
 .nav-right {
   display: flex;
   align-items: center;
@@ -84,7 +83,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 0;
 }
 
 .hero h1 {
@@ -104,12 +102,12 @@ body {
 }
 
 .airbnb-listings iframe {
-  width: 450px;         /* slightly wider to fit full listing */
-  height: 470px;        /* taller to fit full content */
-  border: 1px solid #e0e0e0; /* light grey border */
-  border-radius: 16px;  /* rounded corners */
-  background: white;    /* white background */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  width: 450px;
+  height: 470px;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
