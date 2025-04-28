@@ -28,6 +28,10 @@ html, body {
   position: relative;
 }
 
+header.top-navigation {
+  margin-bottom: 0;
+}
+
 /* Logo */
 .nav-left {
   flex: 1;
@@ -79,6 +83,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 0;
 }
 
 .hero h1 {
