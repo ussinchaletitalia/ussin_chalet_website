@@ -6,21 +6,12 @@
 }
 
 html, body {
-  height: 100%;
-  font-family: 'Kantumruy', sans-serif;
-}
-
-/* --- THIS IS THE MISSING PART! --- */
-header {
   margin: 0;
   padding: 0;
-}
-/* --------------------------------- */
-
-.page-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  font-family: 'Kantumruy', sans-serif;
 }
 
 /* Header */
@@ -33,8 +24,10 @@ header {
   height: 100px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
+  margin: 0;
 }
 
+/* Logo */
 .nav-left {
   flex: 1;
   display: flex;
@@ -47,6 +40,7 @@ header {
   object-fit: contain;
 }
 
+/* Navigation Buttons */
 .nav-right {
   display: flex;
   align-items: center;
@@ -68,21 +62,17 @@ header {
   color: #f8e8e8;
 }
 
-/* Main content */
-.content {
-  flex: 1;
-}
-
 /* Hero Section */
 .hero {
   background: url('../img/mask-group.png') no-repeat center center;
   background-size: cover;
-  background-position: center top;
-  background-color: #fff;
+  background-position: center;
+  background-attachment: scroll;
   height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
 }
 
 .hero h1 {
@@ -92,76 +82,4 @@ header {
   letter-spacing: 4px;
 }
 
-/* Airbnb Listings */
-.airbnb-listings {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-.airbnb-listings iframe {
-  width: 450px;
-  height: 470px;
-  border: 1px solid #e0e0e0;
-  border-radius: 16px;
-  background: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-/* About Section */
-.about {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.about p {
-  font-size: 20px;
-  margin-bottom: 30px;
-  line-height: 1.6;
-}
-
-.btn {
-  background-color: #6a0000;
-  color: #fff;
-  padding: 15px 30px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Location Map */
-.location-map {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.location-map h2 {
-  font-family: 'Inknut Antiqua', serif;
-  font-size: 36px;
-  margin-bottom: 30px;
-  color: #6a0000;
-}
-
-.map {
-  width: 80%;
-  height: 400px;
-  margin: 0 auto;
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-/* Footer */
-.footer {
-  background-color: #6a0000;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-.footer p {
-  margin-bottom: 10px;
-  font-size: 14px;
-}
+/* The rest is fine */
