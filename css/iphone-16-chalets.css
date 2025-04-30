@@ -697,6 +697,12 @@
   width: 444px;
 }
 
+@media only screen and (max-width: 480px) {
+  .ussinchaletgmailcom-39-0123-456789-C61RwL {
+    display: none !important;
+  }
+}
+
 .iphone-16-contact-us .ussi-chalet_logo-1-VdQhAS {
   --z-index: 0;
   background-color: transparent;
