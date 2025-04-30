@@ -45,41 +45,34 @@
 
 /* Airbnb Embed */
 .airbnb-embed {
-    width: 100%;
-    max-width: 450px;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 10px;
-    background: #f8f8f8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  max-width: 450px;
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8f8f8;
 }
 
-/* Ensure Airbnb iframe fits properly */
 .airbnb-embed-frame {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    zoom: 0.6;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Fix Airbnb iframe styling */
 .airbnb-embed-frame iframe {
   width: 100% !important;
-  height: 300px !important;
-  object-fit: contain !important;
-  pointer-events: auto;
+  height: 100% !important;
+  border: none !important;
+  pointer-events: none; /* Prevents dragging */
   user-select: none;
-  -webkit-user-drag: none;
-  border: none;
-  display: block;
-  margin: 0 auto;
-  transform: none !important;
-  zoom: 1 !important;
+  object-fit: contain;
 }
 
 
