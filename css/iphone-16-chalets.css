@@ -69,14 +69,19 @@
 
 /* Fix Airbnb iframe styling */
 .airbnb-embed-frame iframe {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    overflow: hidden !important;
-    pointer-events: none; /* Prevents interactions with iframe */
-    user-select: none; /* Prevents accidental selection */
-    -webkit-user-drag: none; /* Specifically for Safari */
+  width: 100% !important;
+  height: 300px !important;
+  object-fit: contain !important;
+  pointer-events: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+  border: none;
+  display: block;
+  margin: 0 auto;
+  transform: none !important;
+  zoom: 1 !important;
 }
+
 
 .iphone-16-chalets {
   background-color: #ffffff;
