@@ -34,15 +34,15 @@
 }
 
 .airbnb-listings-container {
-  width: 90%;
-  max-width: 450px;
-  margin: 50px auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  padding: 20px;
-  box-sizing: border-box;
+    width: 90%;
+    max-width: 450px;
+    margin: 80px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    z-index: 50;
 }
 
 /* Airbnb Embed */
