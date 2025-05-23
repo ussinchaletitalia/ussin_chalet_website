@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="css/desktop-chalets.css">
 
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfmLbJ-Xc-oaIuoFs1NuPRB6FygUWCyY0&callback=initMap"></script>
+  <script src="https://js.stripe.com/v3/"></script>
+
   <script>
     function initMap() {
       const location = { lat: 45.861221, lng: 7.612102 };
@@ -21,7 +23,40 @@
         title: 'Ussin Chalet',
       });
     }
+
+    function redirectToCheckout() {
+      const stripe = Stripe('pk_test_XXXXXXXXXXXXXXXXXXXXXXXX'); // Replace with your real public key
+      stripe.redirectToCheckout({
+        sessionId: 'YOUR_CHECKOUT_SESSION_ID' // Replace with actual session ID from backend
+      }).then(function(result) {
+        if (result.error) {
+          alert(result.error.message);
+        }
+      });
+    }
   </script>
+
+  <style>
+    .pay-booking {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .stripe-button {
+      background-color: #6772e5;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .stripe-button:hover {
+      background-color: #5469d4;
+    }
+  </style>
 </head>
 
 <body>
@@ -57,11 +92,9 @@
         <a href="desktop-contact-us.html" class="btn">CONTACT US</a>
       </section>
 
-      <!-- PAY A BOOKING BUTTON -->
+      <!-- PAY A BOOKING BUTTON (Centered & Stripe Popup) -->
       <section class="pay-booking">
-        <a href="https://buy.stripe.com/test_xyz" target="_blank" class="btn" style="margin: 2rem auto; display: inline-block; text-align: center;">
-          PAY A BOOKING
-        </a>
+        <button class="stripe-button" onclick="redirectToCheckout()">PAY A BOOKING</button>
       </section>
 
       <section class="location-map">
