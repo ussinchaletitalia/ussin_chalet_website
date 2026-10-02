@@ -1,51 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ussin Chalet | Contact Us</title>
-  <link rel="stylesheet" href="css/desktop-contact-us.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Ussin Chalet" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/css/site.css" />
+  <title>Contact us | Ussin Chalet, Valtournenche</title>
+  <meta name="description" content="Get in touch with Ussin Chalet about availability, longer stays or anything else. We reply to every message." />
+  <link rel="canonical" href="https://www.ussinchalet.com/desktop-contact-us.html" />
+  <meta property="og:title" content="Contact us | Ussin Chalet" />
+  <meta property="og:description" content="Ask us about availability at our alpine apartments in Valtournenche." />
+  <meta property="og:image" content="https://www.ussinchalet.com/img/social-share-image.jpg" />
+  <meta property="og:url" content="https://www.ussinchalet.com/desktop-contact-us.html" />
+  <meta property="og:type" content="website" />
 </head>
-
 <body>
-  <div class="page-container">
-    
-    <header class="top-navigation">
-      <a href="index.html">
-        <img class="ussi-chalet-logo" src="img/ussi-chalet-logo-white-1.png" alt="Ussin Chalet Logo">
+<div class="page">
+  <header class="site-header">
+    <a href="/" aria-label="Ussin Chalet home">
+      <img src="/img/ussi-chalet-logo-white-1.png" alt="Ussin Chalet" />
+    </a>
+    <nav class="nav">
+      <a href="/desktop-chalets.html">Our chalets</a>
+      <a href="/desktop-contact-us.html" aria-current="page">Contact us</a>
+      <a class="instagram" href="https://www.instagram.com/ussinchalet" target="_blank" rel="noopener" aria-label="Ussin Chalet on Instagram">
+        <img src="/img/group-7@2x.png" alt="" />
       </a>
-      <div class="nav-buttons">
-        <a href="desktop-chalets.html" class="nav-button">OUR CHALETS</a>
-        <a href="desktop-contact-us.html" class="nav-button">CONTACT US</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="hero" style="background-image: url('/img/mask-group.png');">
+      <h1>Contact us</h1>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <p class="lead">
+          Questions about availability, longer stays or getting here?
+          Send us a message, or email <a href="mailto:ussinchalet@gmail.com">ussinchalet@gmail.com</a>.
+        </p>
+
+        <form class="form" action="https://formspree.io/f/xkggklva" method="POST">
+          <label>
+            Your email
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label>
+            Your message
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+          <button class="btn" type="submit">Send message</button>
+        </form>
       </div>
-    </header>
+    </section>
+  </main>
 
-    <main class="content">
-      <div class="desktop-contact-us screen">
-        <div class="rectangle-4"></div>
-
-        <div class="contact-us">CONTACT US</div>
-        <p class="contact-email">ussinchalet@gmail.com</p>
-
-        <div class="form-container">
-          <form action="https://formspree.io/f/xkggklva" method="POST">
-            <label>Your email:
-              <input type="email" name="email" required>
-            </label>
-            <label>Your message:
-              <textarea name="message" rows="5" required></textarea>
-            </label>
-            <button type="submit">Send</button>
-          </form>
-        </div>
-      </div>
-    </main>
-
-    <footer class="footer">
-      <p>ussinchalet@gmail.com</p>
-      <p>© 2024 Your Chalet and Apartment Rentals - All rights reserved</p>
-    </footer>
-
-  </div>
+  <footer class="site-footer">
+    <p><a href="mailto:ussinchalet@gmail.com">ussinchalet@gmail.com</a></p>
+    <p>Valtournenche, Aosta Valley, Italy</p>
+    <p>&copy; 2026 Ussin Chalet. All rights reserved.</p>
+  </footer>
+</div>
 </body>
 </html>

@@ -1,0 +1,40 @@
+name: Update Cervinia lift status
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Get Cervinia status
+        run: python scripts/update_cervinia_status.py
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet data/cervinia-status.json; then
+            echo "No status change"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/cervinia-status.json
+          git commit -m "Update Cervinia lift status"
+          git push

@@ -1,114 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ussin Chalet</title>
-
-  <link rel="stylesheet" href="css/desktop-chalets.css">
-
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfmLbJ-Xc-oaIuoFs1NuPRB6FygUWCyY0&callback=initMap"></script>
-  <script src="https://js.stripe.com/v3/"></script>
-
-  <script>
-    function initMap() {
-      const location = { lat: 45.8530410363233, lng: 7.604977028835924 };
-      const map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 14,
-        center: location,
-      });
-      new google.maps.Marker({
-        position: location,
-        map: map,
-        title: 'Ussin Chalet',
-      });
-    }
-
-    function redirectToCheckout() {
-      const stripe = Stripe('pk_test_XXXXXXXXXXXXXXXXXXXXXXXX'); // Replace with your real public key
-      stripe.redirectToCheckout({
-        sessionId: 'YOUR_CHECKOUT_SESSION_ID' // Replace with actual session ID from backend
-      }).then(function(result) {
-        if (result.error) {
-          alert(result.error.message);
-        }
-      });
-    }
-  </script>
-
-  <style>
-    .pay-booking {
-      text-align: center;
-      margin: 40px 0;
-    }
-
-    .stripe-button {
-      background-color: #6772e5;
-      color: white;
-      padding: 12px 24px;
-      font-size: 16px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-    }
-
-    .stripe-button:hover {
-      background-color: #5469d4;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Ussin Chalet" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/css/site.css" />
+  <title>Our chalets | Ussin Chalet, Valtournenche</title>
+  <meta name="description" content="Browse our alpine apartments in Valtournenche near Cervinia. Book directly through Airbnb, or contact us for availability and longer stays." />
+  <link rel="canonical" href="https://www.ussinchalet.com/desktop-chalets.html" />
+  <meta property="og:title" content="Our chalets | Ussin Chalet" />
+  <meta property="og:description" content="Alpine apartments in Valtournenche, near Cervinia." />
+  <meta property="og:image" content="https://www.ussinchalet.com/img/social-share-image.jpg" />
+  <meta property="og:url" content="https://www.ussinchalet.com/desktop-chalets.html" />
+  <meta property="og:type" content="website" />
 </head>
-
 <body>
+<div class="page">
+  <header class="site-header">
+    <a href="/" aria-label="Ussin Chalet home">
+      <img src="/img/ussi-chalet-logo-white-1.png" alt="Ussin Chalet" />
+    </a>
+    <nav class="nav">
+      <a href="/desktop-chalets.html" aria-current="page">Our chalets</a>
+      <a href="/desktop-contact-us.html">Contact us</a>
+      <a class="instagram" href="https://www.instagram.com/ussinchalet" target="_blank" rel="noopener" aria-label="Ussin Chalet on Instagram">
+        <img src="/img/group-7@2x.png" alt="" />
+      </a>
+    </nav>
+  </header>
 
-  <div class="page-container">
+  <main class="content">
+    <section class="hero" style="background-image: url('/img/mask-group.png');">
+      <h1>Our chalets</h1>
+    </section>
 
-    <header class="top-navigation">
-      <div class="nav-left">
-        <a href="index.html">
-          <img class="ussi-chalet-logo" src="img/ussi-chalet-logo-white-1.png" alt="Ussin Chalet Logo">
-        </a>
+    <section class="section">
+      <div class="wrap">
+        <div class="listings">
+          <iframe src="https://www.airbnb.it/embeddable/home?externalPageUrl=https%3A%2F%2Fwww.ussinchalet.com%2Fdesktop-chalets.html&hide-price=true&id=979009583861992990" title="Ussin Chalet apartment on Airbnb" loading="lazy" allowfullscreen></iframe>
+          <iframe src="https://www.airbnb.it/embeddable/home?externalPageUrl=https%3A%2F%2Fwww.ussinchalet.com%2Fdesktop-chalets.html&hide-price=true&id=1189233581383934270" title="Ussin Chalet apartment on Airbnb" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <p class="lead" style="margin-top: 40px;">
+          Apartments in the stunning Italian Alps near Cervinia, ideal for skiing, hiking,
+          or simply relaxing in the mountain landscape.
+        </p>
+        <p class="centre"><a class="btn" href="/desktop-contact-us.html">Contact us</a></p>
       </div>
-      <div class="nav-right">
-        <a href="desktop-chalets.html" class="nav-button">OUR CHALETS</a>
-        <a href="desktop-contact-us.html" class="nav-button">CONTACT US</a>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap">
+        <h2>Where we are</h2>
+        <div class="split">
+          <div id="map" class="map"></div>
+          <div class="snow-widget">
+            <div id="weatherfeed">
+              <iframe src="https://www.snow-forecast.com/resorts/Cervinia/forecasts/widget/mid/m" title="Snow forecast for Breuil-Cervinia Valtournenche" loading="lazy" allowtransparency="true"></iframe>
+            </div>
+          </div>
+        </div>
       </div>
-    </header>
 
-    <main class="content">
-      <section class="hero">
-        <h1>OUR CHALETS</h1>
-      </section>
+          <div class="lifts-panel">
 
-      <section class="airbnb-listings" id="chalets">
-        <iframe src="https://www.airbnb.it/embeddable/home?externalPageUrl=https%3A%2F%2Fwww.ussinchalet.com%2Fdesktop-chalets.html&hide-price=true&id=979009583861992990" frameborder="0" allowfullscreen></iframe>
+            <a
+              class="cervinia-status-card"
+              href="https://www.cervinia.it/en/impianti"
+              target="_blank"
+              rel="noopener"
+              aria-label="View Cervinia lift status">
 
-        <iframe src="https://www.airbnb.it/embeddable/home?externalPageUrl=https%3A%2F%2Fwww.ussinchalet.com%2Fdesktop-chalets.html&hide-price=true&id=1189233581383934270" frameborder="0" allowfullscreen></iframe>
-      </section>
+              <div class="cervinia-lift-icon" aria-hidden="true">
+                🚠
+              </div>
 
-      <section class="about">
-        <p>We offer apartments located in the stunning Italian Alps near Cervinia.<br>
-          Perfect for skiing, hiking, or relaxing in the beautiful mountain landscape.</p>
-        <a href="desktop-contact-us.html" class="btn">CONTACT US</a>
-      </section>
+              <div class="cervinia-lift-info">
 
-      <!-- PAY A BOOKING BUTTON (Centered & Stripe Popup) -->
-      <section class="pay-booking">
-        <button class="stripe-button" onclick="redirectToCheckout()">PAY A BOOKING</button>
-      </section>
+                <span class="cervinia-status-title">
+                  SKI LIFTS
+                </span>
 
-      <section class="location-map">
-        <h2>OUR LOCATION</h2>
-        <div id="map" class="map"></div>
-      </section>
-    </main>
+                <div class="cervinia-lift-count">
+                  <strong id="cervinia-lifts-open">—</strong>
+                  <span> / </span>
+                  <span id="cervinia-lifts-total">—</span>
+                </div>
 
-    <footer class="footer">
-      <p>ussinchalet@gmail.com</p>
-      <p>© 2024 Your Chalet and Apartment Rentals - All rights reserved</p>
-    </footer>
+                <span class="cervinia-status-caption">
+                  lifts open
+                </span>
 
-  </div>
+              </div>
+
+            </a>
+
+
+            <a
+              class="crossing-card"
+              href="https://www.cervinia.it/en/matterhorn-alpine-crossing"
+              target="_blank"
+              rel="noopener">
+
+              <span class="crossing-title">
+                ZERMATT ↔ CERVINIA
+              </span>
+
+              <strong
+                id="cervinia-crossing"
+                class="crossing-value">
+                CHECKING…
+              </strong>
+
+            </a>
+
+          </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><a href="mailto:ussinchalet@gmail.com">ussinchalet@gmail.com</a></p>
+    <p>Valtournenche, Aosta Valley, Italy</p>
+    <p>&copy; 2026 Ussin Chalet. All rights reserved.</p>
+  </footer>
+</div>
+
+<script>
+  function initMap() {
+    const location = { lat: 45.8530410363233, lng: 7.604977028835924 };
+    const map = new google.maps.Map(document.getElementById('map'), { zoom: 14, center: location });
+    new google.maps.Marker({ position: location, map: map, title: 'Ussin Chalet' });
+  }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfmLbJ-Xc-oaIuoFs1NuPRB6FygUWCyY0&callback=initMap"></script>
+
+<script>
+/* Cervinia live status JSON */
+(function () {
+
+  const openEl =
+    document.getElementById('cervinia-lifts-open');
+
+  const totalEl =
+    document.getElementById('cervinia-lifts-total');
+
+  const crossingEl =
+    document.getElementById('cervinia-crossing');
+
+
+  fetch('/data/cervinia-status.json?t=' + Date.now(), {
+    cache: 'no-store'
+  })
+
+    .then(function (response) {
+
+      if (!response.ok) {
+        throw new Error('Status request failed');
+      }
+
+      return response.json();
+
+    })
+
+    .then(function (data) {
+
+      if (openEl) {
+        openEl.textContent =
+          data.lifts_open ?? '—';
+      }
+
+      if (totalEl) {
+        totalEl.textContent =
+          data.lifts_total ?? '—';
+      }
+
+      if (crossingEl) {
+
+        const status =
+          (data.crossing || 'unknown').toLowerCase();
+
+        crossingEl.classList.remove(
+          'is-open',
+          'is-closed'
+        );
+
+        if (status === 'open') {
+
+          crossingEl.textContent = 'OPEN';
+          crossingEl.classList.add('is-open');
+
+        }
+
+        else if (status === 'closed') {
+
+          crossingEl.textContent = 'CLOSED';
+          crossingEl.classList.add('is-closed');
+
+        }
+
+        else {
+
+          crossingEl.textContent = 'STATUS UNKNOWN';
+
+        }
+
+      }
+
+    })
+
+    .catch(function (error) {
+
+      console.error(
+        'Could not load Cervinia status:',
+        error
+      );
+
+      if (crossingEl) {
+        crossingEl.textContent =
+          'STATUS UNAVAILABLE';
+      }
+
+    });
+
+})();
+</script>
 
 </body>
 </html>

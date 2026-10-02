@@ -1,0 +1,492 @@
+/* Ussin Chalet: one stylesheet for every page. */
+
+@import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&family=Kantumruy+Pro:wght@400;600&display=swap");
+
+:root {
+  --red: #640f0f;
+  --red-dark: #4a0b0b;
+  --cream: #fdf8f7;
+  --white: #ffffff;
+  --ink: #2b2b2b;
+  --muted: #6b635c;
+  --border: #e6ddd8;
+  --serif: "Inknut Antiqua", Georgia, serif;
+  --sans: "Kantumruy Pro", "Helvetica Neue", Arial, sans-serif;
+  --radius: 14px;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --page: 1200px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  min-height: 100%;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--red); }
+
+:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+
+.page { display: flex; flex-direction: column; min-height: 100vh; }
+.content { flex: 1; }
+.wrap { width: 100%; max-width: var(--page); margin: 0 auto; padding: 0 24px; }
+
+/* Header */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  background: var(--red);
+  padding: 16px 32px;
+  box-shadow: var(--shadow);
+}
+
+.site-header img { height: 54px; width: auto; object-fit: contain; }
+
+.nav { display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
+
+.nav a {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--white);
+  text-decoration: none;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.25s ease, opacity 0.25s ease;
+}
+
+.nav a:hover { border-bottom-color: var(--white); }
+.nav a[aria-current="page"] { border-bottom-color: var(--white); }
+
+.nav .instagram { display: flex; align-items: center; }
+.nav .instagram img { height: 42px; transition: opacity 0.25s ease, transform 0.25s ease; }
+.nav .instagram:hover img { transform: scale(1.08); }
+.nav .instagram:hover img { opacity: 0.75; }
+
+/* Hero */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 340px;
+  padding: 64px 24px;
+  background: var(--red) center / cover no-repeat;
+  color: var(--white);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.hero > * { position: relative; z-index: 1; }
+
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(32px, 5vw, 52px);
+  letter-spacing: 4px;
+  line-height: 1.2;
+}
+
+.hero p {
+  margin-top: 16px;
+  font-size: clamp(16px, 2vw, 20px);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* Full-height homepage hero */
+.hero-home {
+  min-height: 78vh;
+  flex-direction: column;
+  gap: 32px;
+  background-image: url("../img/ussinbeautiful-1.jpg");
+}
+
+.hero-home .logo { height: clamp(70px, 12vw, 110px); width: auto; margin: 0 auto; }
+
+/* Sections */
+.section { padding: 72px 0; }
+.section.alt { background: var(--white); }
+.section h2 {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.5vw, 36px);
+  color: var(--red);
+  text-align: center;
+  margin-bottom: 32px;
+  letter-spacing: 2px;
+}
+
+.lead { max-width: 680px; margin: 0 auto 32px; text-align: center; font-size: 19px; }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: var(--red);
+  color: var(--white);
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px 32px;
+  border: 2px solid var(--red);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.btn:hover { background: var(--red-dark); border-color: var(--red-dark); transform: translateY(-2px); }
+.btn.ghost { background: var(--white); color: var(--red); border-color: var(--white); }
+.btn.ghost:hover { background: var(--cream); border-color: var(--cream); }
+
+.centre { text-align: center; }
+
+/* Listings and map */
+.listings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.listings iframe {
+  width: 100%;
+  height: 470px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.map {
+  width: 100%;
+  height: 320px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--border);
+}
+
+/* Form */
+.form {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.form label { display: block; margin-bottom: 20px; font-weight: 600; color: var(--red); }
+
+.form input,
+.form textarea {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px 14px;
+  font: inherit;
+  color: var(--ink);
+  background: var(--cream);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  transition: border-color 0.25s ease;
+}
+
+.form input:focus,
+.form textarea:focus { border-color: var(--red); outline: none; }
+
+.form button { width: 100%; }
+
+/* Instagram feed */
+.feed { min-height: 320px; }
+
+/* Footer */
+.site-footer {
+  background: var(--red);
+  color: var(--white);
+  text-align: center;
+  padding: 32px 24px;
+  font-size: 14px;
+}
+
+.site-footer a { color: var(--white); }
+.site-footer p + p { margin-top: 6px; opacity: 0.8; }
+
+@media (max-width: 720px) {
+  .site-header { padding: 12px 20px; justify-content: center; }
+  .site-header img { height: 44px; }
+  .nav { gap: 20px; width: 100%; justify-content: center; }
+  .nav a { font-size: 15px; letter-spacing: 1px; }
+  .section { padding: 48px 0; }
+  .hero-home { min-height: 70vh; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+
+/* Homepage hero buttons, stacked on narrow screens */
+.hero-actions { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+
+.hero-instagram img { height: 92px; width: auto; transition: transform 0.25s ease, opacity 0.25s ease; }
+.hero-instagram:hover img { transform: scale(1.08); opacity: 0.85; }
+
+/* Map and snow forecast side by side */
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+
+@media (max-width: 900px) {
+  .split { grid-template-columns: 1fr; }
+}
+
+/* Snow forecast widget */
+.snow-widget { width: 100%; }
+
+#weatherfeed { width: 100%; }
+
+#weatherfeed iframe {
+  display: block;
+  width: 100%;
+  height: 320px;
+  border: 0;
+  border-radius: var(--radius);
+}
+
+
+
+
+
+
+/* Cervinia native lift counter */
+
+.lifts-panel {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.lift-count-card {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  padding: 24px 32px;
+
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+
+  color: inherit;
+  text-decoration: none;
+}
+
+.lift-icon {
+  font-size: 48px;
+  line-height: 1;
+}
+
+.lift-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.lift-label {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--red);
+}
+
+.lift-number {
+  margin-top: 4px;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.lift-count-card:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+
+  .lift-count-card {
+    padding: 20px 24px;
+  }
+
+  .lift-icon {
+    font-size: 40px;
+  }
+
+  .lift-number {
+    font-size: 36px;
+  }
+}
+
+
+/* Native Cervinia status widgets */
+
+.lifts-panel {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.cervinia-status-card,
+.crossing-card {
+  min-height: 150px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: inherit;
+}
+
+.cervinia-status-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 26px 30px;
+}
+
+.cervinia-lift-icon {
+  font-size: 54px;
+  line-height: 1;
+}
+
+.cervinia-lift-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cervinia-status-title,
+.crossing-title {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+  color: var(--muted);
+}
+
+.cervinia-lift-count {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 3px;
+  font-size: 30px;
+}
+
+#cervinia-lifts-open {
+  font-family: var(--serif);
+  color: var(--red);
+  font-size: 52px;
+  line-height: 1;
+}
+
+#cervinia-lifts-total {
+  font-size: 30px;
+}
+
+.cervinia-status-caption {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.crossing-card {
+  padding: 26px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.crossing-value {
+  display: inline-block;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.crossing-value.is-open {
+  color: #15803d;
+}
+
+.crossing-value.is-closed {
+  color: var(--red);
+}
+
+.cervinia-status-card:hover,
+.crossing-card:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 700px) {
+
+  .lifts-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .cervinia-status-card,
+  .crossing-card {
+    min-height: 130px;
+  }
+
+  .cervinia-lift-icon {
+    font-size: 44px;
+  }
+
+  #cervinia-lifts-open {
+    font-size: 44px;
+  }
+}
+
+
+/* Centre Airbnb embeds inside their columns */
+.listings {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  align-items: start;
+}
+
+.listings iframe {
+  display: block;
+  width: 450px;
+  max-width: 100%;
+  margin: 0 auto;
+  justify-self: center;
+}
+
+@media (max-width: 900px) {
+  .listings {
+    grid-template-columns: 1fr;
+  }
+}
