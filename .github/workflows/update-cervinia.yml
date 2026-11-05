@@ -21,6 +21,11 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
+          
+      - name: Install Playwright
+        run: |
+          pip install playwright
+          playwright install --with-deps chromium
 
       - name: Get Cervinia status
         run: python scripts/update_cervinia_status.py
