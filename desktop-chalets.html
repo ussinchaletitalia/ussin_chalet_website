@@ -138,96 +138,86 @@
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfmLbJ-Xc-oaIuoFs1NuPRB6FygUWCyY0&callback=initMap"></script>
 
+
 <script>
-/* Cervinia live status JSON */
 (function () {
+  const openEl = document.getElementById('cervinia-lifts-open');
+  const totalEl = document.getElementById('cervinia-lifts-total');
+  const crossingEl = document.getElementById('cervinia-crossing');
 
-  const openEl =
-    document.getElementById('cervinia-lifts-open');
-
-  const totalEl =
-    document.getElementById('cervinia-lifts-total');
-
-  const crossingEl =
-    document.getElementById('cervinia-crossing');
-
-
-  fetch('/data/cervinia-status.json?t=' + Date.now(), {
-    cache: 'no-store'
-  })
-
-    .then(function (response) {
-
-      if (!response.ok) {
-        throw new Error('Status request failed');
-      }
-
-      return response.json();
-
-    })
-
-    .then(function (data) {
-
-      if (openEl) {
-        openEl.textContent =
-          data.lifts_open ?? '—';
-      }
-
-      if (totalEl) {
-        totalEl.textContent =
-          data.lifts_total ?? '—';
-      }
-
-      if (crossingEl) {
-
-        const status =
-          (data.crossing || 'unknown').toLowerCase();
-
-        crossingEl.classList.remove(
-          'is-open',
-          'is-closed'
-        );
-
-        if (status === 'open') {
-
-          crossingEl.textContent = 'OPEN';
-          crossingEl.classList.add('is-open');
-
-        }
-
-        else if (status === 'closed') {
-
-          crossingEl.textContent = 'CLOSED';
-          crossingEl.classList.add('is-closed');
-
-        }
-
-        else {
-
-          crossingEl.textContent = 'STATUS UNKNOWN';
-
-        }
-
-      }
-
-    })
-
-    .catch(function (error) {
-
-      console.error(
-        'Could not load Cervinia status:',
-        error
+  async function updateCerviniaStatus() {
+    try {
+      const response = await fetch(
+        '/data/cervinia-status.json?t=' + Date.now(),
+        { cache: 'no-store' }
       );
 
-      if (crossingEl) {
-        crossingEl.textContent =
-          'STATUS UNAVAILABLE';
+      if (!response.ok) {
+        throw new Error('Cervinia data unavailable');
       }
 
-    });
+      const data = await response.json();
+      console.log('Cervinia data:', data);
 
+      const open = Number(data.lifts_open);
+      const total = Number(data.lifts_total);
+
+      // Validate the lift figures.
+      if (
+        Number.isInteger(open) &&
+        Number.isInteger(total) &&
+        total > 0 &&
+        open >= 0 &&
+        open <= total
+      ) {
+        openEl.textContent = open;
+        totalEl.textContent = total;
+      } else {
+        // Never display misleading 0 / 0 values.
+        openEl.textContent = '—';
+        totalEl.textContent = '—';
+        console.warn('Invalid lift data:', data);
+      }
+
+      // Cervinia / Zermatt crossing status.
+      const crossing = String(
+        data.crossing || 'unknown'
+      ).trim().toLowerCase();
+
+      crossingEl.classList.remove(
+        'is-open', 'is-closed'
+      );
+
+      if (crossing === 'open') {
+        crossingEl.textContent = 'OPEN';
+        crossingEl.classList.add('is-open');
+      } else if (crossing === 'closed') {
+        crossingEl.textContent = 'CLOSED';
+        crossingEl.classList.add('is-closed');
+      } else {
+        crossingEl.textContent = 'STATUS UNKNOWN';
+      }
+
+    } catch (error) {
+      console.error('Cervinia status error:', error);
+
+      openEl.textContent = '—';
+      totalEl.textContent = '—';
+      crossingEl.textContent = 'STATUS UNAVAILABLE';
+      crossingEl.classList.remove(
+        'is-open', 'is-closed'
+      );
+    }
+  }
+
+  // Initial load.
+  updateCerviniaStatus();
+
+  // Refresh data every 5 minutes.
+  setInterval(updateCerviniaStatus, 300000);
 })();
 </script>
+
 
 </body>
 </html>
