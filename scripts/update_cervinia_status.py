@@ -1,122 +1,99 @@
+"""Read the Cervinia lift board and write data/cervinia-status.json.
+
+The counter on cervinia.it is injected by JavaScript after load, so a plain
+HTTP fetch returns the placeholder "0 di 0". The page has to be rendered.
+"""
+
 from pathlib import Path
-from html.parser import HTMLParser
-from urllib.request import Request, urlopen
 from datetime import datetime, timezone
 import json
 import re
+import sys
 
+from playwright.sync_api import sync_playwright
 
 URL = "https://www.cervinia.it/en/impianti"
-
 BASE = Path(__file__).resolve().parents[1]
 OUTPUT = BASE / "data" / "cervinia-status.json"
 
 
-class TextExtractor(HTMLParser):
-    def __init__(self):
-        super().__init__()
-        self.parts = []
+def read_page() -> str:
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        page = browser.new_page(locale="en-GB")
+        page.goto(URL, wait_until="networkidle", timeout=60000)
 
-    def handle_data(self, data):
-        text = data.strip()
-        if text:
-            self.parts.append(text)
+        # The board hydrates after load; wait for a non-zero total if one is coming.
+        try:
+            page.wait_for_function(
+                "() => /(\\d+)\\s*(?:di|of|\\/)\\s*([1-9]\\d*)/i.test(document.body.innerText)",
+                timeout=20000,
+            )
+        except Exception:
+            pass  # Out of season the total really is zero.
 
+        text = page.inner_text("body")
+        browser.close()
 
-req = Request(
-    URL,
-    headers={
-        "User-Agent": (
-            "Mozilla/5.0 (compatible; UssinChaletLiftStatus/1.0; "
-            "+https://github.com/)"
-        )
-    }
-)
-
-with urlopen(req, timeout=30) as response:
-    html = response.read().decode("utf-8", errors="ignore")
+    return re.sub(r"\s+", " ", text)
 
 
-parser = TextExtractor()
-parser.feed(html)
+text = read_page()
 
-text = " ".join(parser.parts)
-text = re.sub(r"\s+", " ", text)
-
-
-# ------------------------------------------------------------
-# LIFT COUNT
-# Looks for:
-# Ski lifts 12 di 19
-# ------------------------------------------------------------
-
-lift_match = re.search(
-    r"Ski\s+lifts.*?(\d+)\s+di\s+(\d+)",
-    text,
-    flags=re.I
-)
+lift_match = re.search(r"Ski\s+lifts\D{0,40}?(\d+)\s*(?:di|of|/)\s*(\d+)", text, re.I)
+if not lift_match:
+    lift_match = re.search(r"(\d+)\s*(?:di|of|/)\s*(\d+)\s*(?:impianti|lifts)", text, re.I)
 
 if not lift_match:
-    raise RuntimeError("Could not find Cervinia ski lift count")
+    sys.exit("Could not find the Cervinia lift count on the rendered page")
 
 lifts_open = int(lift_match.group(1))
 lifts_total = int(lift_match.group(2))
 
-
-# ------------------------------------------------------------
-# MATTERHORN ALPINE CROSSING
-# ------------------------------------------------------------
+if lifts_open > lifts_total:
+    sys.exit(f"Nonsensical lift count: {lifts_open}/{lifts_total}")
 
 crossing_match = re.search(
-    r"Matterhorn\s+Alpine\s+Crossing\s+(open|closed)",
-    text,
-    flags=re.I
+    r"(?:Matterhorn\s+)?Alpine\s+Crossing\s*[:\-]?\s*(open|closed|aperto|chiuso)", text, re.I
 )
 
 if crossing_match:
-    crossing = crossing_match.group(1).lower()
+    word = crossing_match.group(1).lower()
+    crossing = "open" if word in ("open", "aperto") else "closed"
 else:
     crossing = "unknown"
 
-
-# ------------------------------------------------------------
-# PRESERVE TIMESTAMP IF NOTHING CHANGED
-# ------------------------------------------------------------
-
 old = {}
-
 if OUTPUT.exists():
     try:
         old = json.loads(OUTPUT.read_text())
     except Exception:
         old = {}
 
-same = (
+unchanged = (
     old.get("lifts_open") == lifts_open
     and old.get("lifts_total") == lifts_total
     and old.get("crossing") == crossing
 )
 
-if same:
-    updated_at = old.get("updated_at")
-else:
-    updated_at = datetime.now(timezone.utc).isoformat()
-
-
-data = {
-    "lifts_open": lifts_open,
-    "lifts_total": lifts_total,
-    "crossing": crossing,
-    "updated_at": updated_at
-}
-
 OUTPUT.parent.mkdir(exist_ok=True)
-
 OUTPUT.write_text(
-    json.dumps(data, indent=2) + "\n"
+    json.dumps(
+        {
+            "lifts_open": lifts_open,
+            "lifts_total": lifts_total,
+            OUTPUT.parent.mkdir(exist_ok=True)
+OUTPUT.write_text(
+    json.dumps(
+        {
+            "lifts_open": lifts_open,
+            "lifts_total": lifts_total,
+            "crossing": crossing,
+            "updated_at": old.get("updated_at") if unchanged else datetime.now(timezone.utc).isoformat(),
+        },
+        indent=2,
+    )
+    + "\n"
 )
 
-print(
-    f"Cervinia: {lifts_open}/{lifts_total} lifts open | "
-    f"Crossing: {crossing}"
-)
+print(f"Cervinia: {lifts_open}/{lifts_total} lifts open | Crossing: {crossing}")
